@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libSvc_GndIf.a  CMakeFiles/Svc_GndIf.dir/GetConnectedPortAc.cpp.o CMakeFiles/Svc_GndIf.dir/GndIfComponentAc.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libSvc_GndIf.a

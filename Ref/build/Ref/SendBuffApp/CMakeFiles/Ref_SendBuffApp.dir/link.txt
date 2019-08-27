@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../lib/Linux/libRef_SendBuffApp.a  CMakeFiles/Ref_SendBuffApp.dir/SendBuffComponentImpl.cpp.o CMakeFiles/Ref_SendBuffApp.dir/SendBuffComponentAc.cpp.o
-/usr/bin/ranlib ../../lib/Linux/libRef_SendBuffApp.a

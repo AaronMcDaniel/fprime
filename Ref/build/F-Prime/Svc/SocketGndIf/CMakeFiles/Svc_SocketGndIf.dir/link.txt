@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libSvc_SocketGndIf.a  CMakeFiles/Svc_SocketGndIf.dir/SvcSocketGndIfImpl.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libSvc_SocketGndIf.a

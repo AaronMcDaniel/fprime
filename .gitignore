@@ -61,3 +61,6 @@ core
 py_dict
 .settings
 
+# build files
+Ref/build/
+

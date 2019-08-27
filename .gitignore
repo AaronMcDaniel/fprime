@@ -61,6 +61,11 @@ core
 py_dict
 .settings
 
-# build files
-Ref/build/
+# idea IDEs
+.idea/
+Ref/.idea/
 
+# cmake and other compiled code
+Ref/BUILD/
+Ref/cmake-build-debug/
+cmake-build-debug/

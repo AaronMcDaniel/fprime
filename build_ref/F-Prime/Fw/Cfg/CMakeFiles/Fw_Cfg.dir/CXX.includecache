@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vagrant/src/georgia-preview/Fw/Cfg/ConfigCheck.cpp
+Fw/Cfg/Config.hpp
+-
+Fw/Types/BasicTypes.hpp
+-
+
+/home/vagrant/src/georgia-preview/cmake/../Fw/Cfg/Config.hpp
+
+/home/vagrant/src/georgia-preview/cmake/../Fw/Types/BasicTypes.hpp
+Fw/Cfg/Config.hpp
+-
+StandardTypes.hpp
+-
+
+/home/vagrant/src/georgia-preview/cmake/../Fw/Types/Linux/StandardTypes.hpp
+stdint.h
+-
+

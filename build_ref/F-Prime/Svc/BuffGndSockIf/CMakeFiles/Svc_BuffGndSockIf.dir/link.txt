@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libSvc_BuffGndSockIf.a  CMakeFiles/Svc_BuffGndSockIf.dir/BuffGndSockIfImpl.cpp.o CMakeFiles/Svc_BuffGndSockIf.dir/BuffGndSockIfComponentAc.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libSvc_BuffGndSockIf.a

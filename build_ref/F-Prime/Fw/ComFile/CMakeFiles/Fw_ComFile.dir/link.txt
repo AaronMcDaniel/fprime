@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libFw_ComFile.a  CMakeFiles/Fw_ComFile.dir/FileBuffer.cpp.o CMakeFiles/Fw_ComFile.dir/FilePacket.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libFw_ComFile.a

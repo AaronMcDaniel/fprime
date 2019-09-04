@@ -1,2 +1,0 @@
-/usr/bin/ar qc ../../../lib/Linux/libFw_Comp.a  CMakeFiles/Fw_Comp.dir/ActiveComponentBase.cpp.o CMakeFiles/Fw_Comp.dir/PassiveComponentBase.cpp.o CMakeFiles/Fw_Comp.dir/QueuedComponentBase.cpp.o
-/usr/bin/ranlib ../../../lib/Linux/libFw_Comp.a

@@ -1,3 +1,0 @@
-/home/vagrant/src/fprime/Autocoders/Python/templates/CMakeFiles/CMakeTmp/CMakeFiles/edit_cache.dir
-/home/vagrant/src/fprime/Autocoders/Python/templates/CMakeFiles/CMakeTmp/CMakeFiles/rebuild_cache.dir
-/home/vagrant/src/fprime/Autocoders/Python/templates/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_0b6a7.dir

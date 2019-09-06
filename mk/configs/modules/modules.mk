@@ -96,7 +96,8 @@ REF_MODULES := \
 	Ref/PingReceiver \
 	Ref/MathPorts \
 	Ref/MathTypes \
-	Ref/MathSender
+	Ref/MathSender \
+	Ref/MathReceiver
 	
 Ref_MODULES := \
 	\

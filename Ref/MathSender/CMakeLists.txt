@@ -1,0 +1,33 @@
+set(SOURCE_FILES
+  "${CMAKE_CURRENT_LIST_DIR}/MathSenderComponentAi.xml"
+  "${CMAKE_CURRENT_LIST_DIR}/MathSenderComponentImpl.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/MathSenderComponentImpl.hpp"
+)
+
+register_fprime_module()
+set(UT_SOURCE_FILES
+  "${FPRIME_CORE_DIR}/Svc/CmdDispatcher/CommandDispatcherComponentAi.xml"
+  "${CMAKE_CURRENT_LIST_DIR}/test/ut/main.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/test/ut/Tester.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/test/ut/GTestBase.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/test/ut/TesterBase.cpp"
+)
+
+set(UT_MOD_DEPS
+	"Ref/MathSender"
+	"Ref/MathPorts"
+	"Fw/Cmd"
+	"Fw/Comp"
+	"Fw/Port"
+	"Fw/Prm"
+	"Fw/Time"
+	"Fw/Tlm"
+	"Fw/Types"
+	"Fw/Log"
+	"Fw/Obj"
+	"Fw/Com"
+	"Os"
+	"Utils/Hash"
+    "gtest"
+)
+register_fprime_ut()

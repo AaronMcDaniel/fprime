@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vagrant/src/sterling/Fw/Cfg/Config.hpp
+
+/home/vagrant/src/sterling/Fw/Cfg/ConfigCheck.cpp
+Fw/Cfg/Config.hpp
+-
+Fw/Types/BasicTypes.hpp
+-
+
+/home/vagrant/src/sterling/Fw/Types/AVR/StandardTypes.hpp
+stdint.h
+-
+stdlib.h
+-
+
+/home/vagrant/src/sterling/Fw/Types/BasicTypes.hpp
+Fw/Cfg/Config.hpp
+-
+StandardTypes.hpp
+-
+

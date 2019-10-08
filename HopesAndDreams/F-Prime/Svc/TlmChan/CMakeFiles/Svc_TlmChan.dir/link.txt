@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_TlmChan.a  CMakeFiles/Svc_TlmChan.dir/TlmChanImpl.cpp.obj CMakeFiles/Svc_TlmChan.dir/TlmChanImplGet.cpp.obj CMakeFiles/Svc_TlmChan.dir/TlmChanImplRecv.cpp.obj CMakeFiles/Svc_TlmChan.dir/TlmChanImplTask.cpp.obj CMakeFiles/Svc_TlmChan.dir/TlmChanComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_TlmChan.a

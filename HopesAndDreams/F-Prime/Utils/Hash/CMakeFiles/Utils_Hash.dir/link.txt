@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libUtils_Hash.a  CMakeFiles/Utils_Hash.dir/libcrc/CRC32.cpp.obj CMakeFiles/Utils_Hash.dir/libcrc/lib_crc.c.obj CMakeFiles/Utils_Hash.dir/HashBufferCommon.cpp.obj CMakeFiles/Utils_Hash.dir/HashCommon.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libUtils_Hash.a

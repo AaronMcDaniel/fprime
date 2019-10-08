@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libFw_Obj.a  CMakeFiles/Fw_Obj.dir/ObjBase.cpp.obj CMakeFiles/Fw_Obj.dir/SimpleObjRegistry.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libFw_Obj.a

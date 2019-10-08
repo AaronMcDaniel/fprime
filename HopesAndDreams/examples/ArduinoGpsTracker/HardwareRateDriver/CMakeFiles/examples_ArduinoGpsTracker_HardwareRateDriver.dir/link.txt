@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libexamples_ArduinoGpsTracker_HardwareRateDriver.a  CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/HardwareRateDriver.cpp.obj CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/HardwareRateDriverArduino.cpp.obj CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/HardwareRateDriverComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libexamples_ArduinoGpsTracker_HardwareRateDriver.a

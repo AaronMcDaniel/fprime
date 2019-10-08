@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libFw_Cfg.a  CMakeFiles/Fw_Cfg.dir/ConfigCheck.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libFw_Cfg.a

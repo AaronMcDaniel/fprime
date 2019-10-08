@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libDrv_LinuxSerialDriver.a  CMakeFiles/Drv_LinuxSerialDriver.dir/LinuxSerialDriverComponentImplCommon.cpp.obj CMakeFiles/Drv_LinuxSerialDriver.dir/LinuxSerialDriverComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libDrv_LinuxSerialDriver.a

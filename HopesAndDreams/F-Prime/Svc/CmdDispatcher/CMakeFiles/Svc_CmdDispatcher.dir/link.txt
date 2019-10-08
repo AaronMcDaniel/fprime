@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_CmdDispatcher.a  CMakeFiles/Svc_CmdDispatcher.dir/CommandDispatcherImpl.cpp.obj CMakeFiles/Svc_CmdDispatcher.dir/CommandDispatcherComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_CmdDispatcher.a

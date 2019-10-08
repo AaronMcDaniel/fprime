@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libFw_ComFile.a  CMakeFiles/Fw_ComFile.dir/FileBuffer.cpp.obj CMakeFiles/Fw_ComFile.dir/FilePacket.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libFw_ComFile.a

@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_FileUplink.a  CMakeFiles/Svc_FileUplink.dir/FileUplink.cpp.obj CMakeFiles/Svc_FileUplink.dir/File.cpp.obj CMakeFiles/Svc_FileUplink.dir/Warnings.cpp.obj CMakeFiles/Svc_FileUplink.dir/FileUplinkComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_FileUplink.a

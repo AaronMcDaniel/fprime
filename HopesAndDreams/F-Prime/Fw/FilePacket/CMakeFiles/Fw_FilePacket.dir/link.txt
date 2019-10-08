@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libFw_FilePacket.a  CMakeFiles/Fw_FilePacket.dir/CancelPacket.cpp.obj CMakeFiles/Fw_FilePacket.dir/DataPacket.cpp.obj CMakeFiles/Fw_FilePacket.dir/EndPacket.cpp.obj CMakeFiles/Fw_FilePacket.dir/FilePacket.cpp.obj CMakeFiles/Fw_FilePacket.dir/Header.cpp.obj CMakeFiles/Fw_FilePacket.dir/PathName.cpp.obj CMakeFiles/Fw_FilePacket.dir/StartPacket.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libFw_FilePacket.a

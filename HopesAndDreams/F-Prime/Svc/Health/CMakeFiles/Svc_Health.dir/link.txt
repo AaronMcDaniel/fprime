@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_Health.a  CMakeFiles/Svc_Health.dir/HealthComponentImpl.cpp.obj CMakeFiles/Svc_Health.dir/Stub/HealthComponentStubChecks.cpp.obj CMakeFiles/Svc_Health.dir/HealthComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_Health.a

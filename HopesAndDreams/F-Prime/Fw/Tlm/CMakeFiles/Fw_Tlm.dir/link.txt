@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libFw_Tlm.a  CMakeFiles/Fw_Tlm.dir/TlmBuffer.cpp.obj CMakeFiles/Fw_Tlm.dir/TlmPacket.cpp.obj CMakeFiles/Fw_Tlm.dir/TlmString.cpp.obj CMakeFiles/Fw_Tlm.dir/TlmPortAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libFw_Tlm.a

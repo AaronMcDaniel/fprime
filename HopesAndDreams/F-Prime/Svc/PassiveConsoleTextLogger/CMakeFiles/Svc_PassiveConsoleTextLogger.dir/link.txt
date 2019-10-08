@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_PassiveConsoleTextLogger.a  CMakeFiles/Svc_PassiveConsoleTextLogger.dir/ConsoleTextLoggerImplCommon.cpp.obj CMakeFiles/Svc_PassiveConsoleTextLogger.dir/Stub/PrintfLoggerImplStub.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_PassiveConsoleTextLogger.a

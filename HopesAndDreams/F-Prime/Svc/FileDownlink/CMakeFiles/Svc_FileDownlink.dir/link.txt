@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_FileDownlink.a  CMakeFiles/Svc_FileDownlink.dir/FileDownlink.cpp.obj CMakeFiles/Svc_FileDownlink.dir/File.cpp.obj CMakeFiles/Svc_FileDownlink.dir/Warnings.cpp.obj CMakeFiles/Svc_FileDownlink.dir/FileDownlinkComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_FileDownlink.a

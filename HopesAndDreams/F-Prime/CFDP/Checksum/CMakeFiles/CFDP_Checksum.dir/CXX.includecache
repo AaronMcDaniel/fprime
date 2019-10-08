@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vagrant/src/sterling/CFDP/Checksum/Checksum.cpp
+CFDP/Checksum/Checksum.hpp
+/home/vagrant/src/sterling/CFDP/Checksum/CFDP/Checksum/Checksum.hpp
+Fw/Types/Assert.hpp
+/home/vagrant/src/sterling/CFDP/Checksum/Fw/Types/Assert.hpp
+
+/home/vagrant/src/sterling/CFDP/Checksum/Checksum.hpp
+Fw/Types/BasicTypes.hpp
+/home/vagrant/src/sterling/CFDP/Checksum/Fw/Types/BasicTypes.hpp
+
+/home/vagrant/src/sterling/Fw/Cfg/Config.hpp
+
+/home/vagrant/src/sterling/Fw/Types/AVR/StandardTypes.hpp
+stdint.h
+-
+stdlib.h
+-
+
+/home/vagrant/src/sterling/Fw/Types/Assert.hpp
+Fw/Cfg/Config.hpp
+-
+Fw/Types/BasicTypes.hpp
+-
+
+/home/vagrant/src/sterling/Fw/Types/BasicTypes.hpp
+Fw/Cfg/Config.hpp
+-
+StandardTypes.hpp
+-
+

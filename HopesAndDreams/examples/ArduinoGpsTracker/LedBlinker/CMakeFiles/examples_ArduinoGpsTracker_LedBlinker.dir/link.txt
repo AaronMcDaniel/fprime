@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libexamples_ArduinoGpsTracker_LedBlinker.a  CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/LedBlinker.cpp.obj CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/LedBlinkerLinux.cpp.obj CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/LedBlinkerComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libexamples_ArduinoGpsTracker_LedBlinker.a

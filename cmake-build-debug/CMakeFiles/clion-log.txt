@@ -1,0 +1,45 @@
+/snap/clion/83/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/aaron/ssdl/fprime-devel/sterling
+-- The C compiler identification is GNU 7.4.0
+-- The CXX compiler identification is GNU 7.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- F´ core directory set to: /home/aaron/ssdl/fprime-devel/sterling/cmake/..
+-- Target build platform: Linux
+-- Including /home/aaron/ssdl/fprime-devel/sterling/cmake/platform/Linux.cmake
+-- Requiring thread library
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- [VALIDATION] Running: python;/home/aaron/ssdl/fprime-devel/sterling/cmake/support/validation/pipsetup.py
+lxml is missing.
+Markdown is missing.
+pytest is missing.
+Cheetah; python_version < '3.0' is missing.
+CMake Error at cmake/support/validation/Validation.cmake:38 (message):
+  [VALIDATION] Validation failed for:
+  python;/home/aaron/ssdl/fprime-devel/sterling/cmake/support/validation/pipsetup.py
+Call Stack (most recent call first):
+  cmake/support/validation/Validation.cmake:55 (setup_validation_command)
+  cmake/FPrime.cmake:36 (include)
+  CMakeLists.txt:10 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/aaron/ssdl/fprime-devel/sterling/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/aaron/ssdl/fprime-devel/sterling/cmake-build-debug/CMakeFiles/CMakeError.log".

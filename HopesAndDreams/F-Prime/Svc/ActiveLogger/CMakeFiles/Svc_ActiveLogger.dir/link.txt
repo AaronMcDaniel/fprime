@@ -1,0 +1,2 @@
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libSvc_ActiveLogger.a  CMakeFiles/Svc_ActiveLogger.dir/ActiveLoggerImpl.cpp.obj CMakeFiles/Svc_ActiveLogger.dir/ActiveLoggerComponentAc.cpp.obj
+/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libSvc_ActiveLogger.a

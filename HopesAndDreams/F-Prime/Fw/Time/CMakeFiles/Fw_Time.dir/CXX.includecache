@@ -56,6 +56,12 @@ Fw/Types/BasicTypes.hpp
 Fw/Types/Serializable.hpp
 -
 
+/home/vagrant/src/sterling/Fw/Time/Time.cpp
+Fw/Time/Time.hpp
+-
+Fw/Types/BasicTypes.hpp
+-
+
 /home/vagrant/src/sterling/Fw/Time/Time.hpp
 Fw/Types/BasicTypes.hpp
 -

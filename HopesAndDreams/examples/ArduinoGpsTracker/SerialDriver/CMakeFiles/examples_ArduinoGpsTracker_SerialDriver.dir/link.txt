@@ -1,2 +1,0 @@
-/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ar qc ../../../lib/ArduinoMega/libexamples_ArduinoGpsTracker_SerialDriver.a  CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/SerialDriver.cpp.obj CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/SerialDriverArduino.cpp.obj CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/SerialDriverComponentAc.cpp.obj
-/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-gcc-ranlib ../../../lib/ArduinoMega/libexamples_ArduinoGpsTracker_SerialDriver.a

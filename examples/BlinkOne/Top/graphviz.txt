@@ -1,0 +1,122 @@
+digraph G { label="ArduinoTopologyAppAi"
+	subgraph cluster1 {
+		label=rateGroup10HzComp;
+		node [shape=circle label="Log"]; Port1;
+		node [shape=circle label="Tlm"]; Port2;
+		node [shape=circle label="CycleIn"]; Port3;
+		node [shape=circle label="RateGroupMemberOut"]; Port4;
+		node [shape=circle label="PingIn"]; Port5;
+		node [shape=circle label="PingOut"]; Port6;
+	}
+	subgraph cluster2 {
+		label=rateGroup1HzComp;
+		node [shape=circle label="Log"]; Port7;
+		node [shape=circle label="Tlm"]; Port8;
+		node [shape=circle label="CycleIn"]; Port9;
+		node [shape=circle label="RateGroupMemberOut"]; Port10;
+		node [shape=circle label="PingIn"]; Port11;
+		node [shape=circle label="PingOut"]; Port12;
+	}
+	subgraph cluster3 {
+		label=chanTlm;
+		node [shape=circle label="TlmRecv"]; Port13;
+		node [shape=circle label="Run"]; Port14;
+		node [shape=circle label="pingIn"]; Port15;
+		node [shape=circle label="pingOut"]; Port16;
+		node [shape=circle label="PktSend"]; Port17;
+	}
+	subgraph cluster4 {
+		label=cmdDisp;
+		node [shape=circle label="compCmdReg"]; Port18;
+		node [shape=circle label="CmdReg"]; Port19;
+		node [shape=circle label="compCmdSend"]; Port20;
+		node [shape=circle label="CmdDisp"]; Port21;
+		node [shape=circle label="compCmdStat"]; Port22;
+		node [shape=circle label="CmdStatus"]; Port23;
+		node [shape=circle label="Log"]; Port24;
+		node [shape=circle label="Tlm"]; Port25;
+		node [shape=circle label="pingIn"]; Port26;
+		node [shape=circle label="pingOut"]; Port27;
+		node [shape=circle label="seqCmdBuff"]; Port28;
+	}
+	subgraph cluster5 {
+		label=health;
+		node [shape=circle label="CmdReg"]; Port29;
+		node [shape=circle label="CmdDisp"]; Port30;
+		node [shape=circle label="CmdStatus"]; Port31;
+		node [shape=circle label="Log"]; Port32;
+		node [shape=circle label="Tlm"]; Port33;
+		node [shape=circle label="Run"]; Port34;
+		node [shape=circle label="PingSend"]; Port35;
+		node [shape=circle label="PingReturn"]; Port36;
+	}
+	subgraph cluster6 {
+		label=eventLogger;
+		node [shape=circle label="CmdReg"]; Port37;
+		node [shape=circle label="CmdDisp"]; Port38;
+		node [shape=circle label="CmdStatus"]; Port39;
+		node [shape=circle label="Log"]; Port40;
+		node [shape=circle label="LogRecv"]; Port41;
+		node [shape=circle label="pingIn"]; Port42;
+		node [shape=circle label="pingOut"]; Port43;
+		node [shape=circle label="PktSend"]; Port44;
+	}
+	subgraph cluster7 {
+		label=rateGroupDriverComp;
+		node [shape=circle label="CycleIn"]; Port45;
+		node [shape=circle label="CycleOut"]; Port46;
+	}
+	subgraph cluster8 {
+		label=groundInterface;
+		node [shape=circle label="schedIn"]; Port47;
+		node [shape=circle label="uplinkPort"]; Port48;
+		node [shape=circle label="downlinkPort"]; Port49;
+	}
+	subgraph cluster9 {
+		label=ledBlinker;
+		node [shape=circle label="schedIn"]; Port50;
+	}
+	subgraph cluster10 {
+		label=hardwareRateDriver;
+		node [shape=circle label="CycleOut"]; Port51;
+	}
+
+	port37 -> port18;
+	port19 -> port18;
+	port29 -> port18;
+	port20 -> port38;
+	port20 -> port21;
+	port20 -> port30;
+	port39 -> port22;
+	port23 -> port22;
+	port31 -> port22;
+	port40 -> port41;
+	port24 -> port41;
+	port32 -> port41;
+	port1 -> port41;
+	port7 -> port41;
+	port25 -> port13;
+	port8 -> port13;
+	port2 -> port13;
+	port33 -> port13;
+	port51 -> port45;
+	port46 -> port3;
+	port46 -> port9;
+	port4 -> port47;
+	port4 -> port50;
+	port10 -> port14;
+	port10 -> port34;
+	port35 -> port5;
+	port35 -> port11;
+	port35 -> port26;
+	port35 -> port15;
+	port35 -> port42;
+	port6 -> port36;
+	port12 -> port36;
+	port27 -> port36;
+	port16 -> port36;
+	port43 -> port36;
+	port48 -> port28;
+	port44 -> port49;
+	port17 -> port49;
+}

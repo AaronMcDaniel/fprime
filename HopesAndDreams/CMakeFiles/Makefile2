@@ -44,7 +44,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/src/sterling/examples/ArduinoBlink
+CMAKE_SOURCE_DIR = /home/vagrant/src/sterling/examples/BlinkOne
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/vagrant/src/sterling/HopesAndDreams
@@ -61,10 +61,9 @@ all: F-Prime/Os/all
 all: F-Prime/Drv/all
 all: F-Prime/CFDP/all
 all: F-Prime/Utils/all
-all: examples/ArduinoGpsTracker/SerialDriver/all
 all: examples/ArduinoGpsTracker/HardwareRateDriver/all
 all: examples/ArduinoGpsTracker/LedBlinker/all
-all: examples/ArduinoBlink/Top/all
+all: examples/BlinkOne/Top/all
 
 .PHONY : all
 
@@ -77,10 +76,9 @@ clean: F-Prime/Os/clean
 clean: F-Prime/Drv/clean
 clean: F-Prime/CFDP/clean
 clean: F-Prime/Utils/clean
-clean: examples/ArduinoGpsTracker/SerialDriver/clean
 clean: examples/ArduinoGpsTracker/HardwareRateDriver/clean
 clean: examples/ArduinoGpsTracker/LedBlinker/clean
-clean: examples/ArduinoBlink/Top/clean
+clean: examples/BlinkOne/Top/clean
 
 .PHONY : clean
 
@@ -92,10 +90,9 @@ preinstall: F-Prime/Os/preinstall
 preinstall: F-Prime/Drv/preinstall
 preinstall: F-Prime/CFDP/preinstall
 preinstall: F-Prime/Utils/preinstall
-preinstall: examples/ArduinoGpsTracker/SerialDriver/preinstall
 preinstall: examples/ArduinoGpsTracker/HardwareRateDriver/preinstall
 preinstall: examples/ArduinoGpsTracker/LedBlinker/preinstall
-preinstall: examples/ArduinoBlink/Top/preinstall
+preinstall: examples/BlinkOne/Top/preinstall
 
 .PHONY : preinstall
 
@@ -104,7 +101,7 @@ preinstall: examples/ArduinoBlink/Top/preinstall
 
 # All Build rule for target.
 CMakeFiles/dict.dir/all: F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer_dict.dir/all
-CMakeFiles/dict.dir/all: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/all
+CMakeFiles/dict.dir/all: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/all
 	$(MAKE) -f CMakeFiles/dict.dir/build.make CMakeFiles/dict.dir/depend
 	$(MAKE) -f CMakeFiles/dict.dir/build.make CMakeFiles/dict.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target dict"
@@ -245,7 +242,7 @@ F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/preinstall:
 F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all:
 	$(MAKE) -f F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/build.make F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/depend
 	$(MAKE) -f F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/build.make F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=92,93,94,95 "Built target codegen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=93,94,95,96 "Built target codegen"
 .PHONY : F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -378,7 +375,7 @@ F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer_dict.dir/all: F-Prime/Fw/Buffer/CMakeFile
 
 # Build rule for subdir invocation for target.
 F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer_dict.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer_dict.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer_dict.dir/rule
@@ -433,12 +430,12 @@ F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer.dir/clean:
 F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/all: F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
 	$(MAKE) -f F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/build.make F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/depend
 	$(MAKE) -f F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/build.make F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=3 "Built target BufferSerializableAi_Fw_Buffer_dict"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target BufferSerializableAi_Fw_Buffer_dict"
 .PHONY : F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Fw/Buffer/CMakeFiles/BufferSerializableAi_Fw_Buffer_dict.dir/rule
@@ -792,12 +789,12 @@ F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/all: F-Prime/Fw/Types/CMakeFiles/arduinocor
 F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/build.make F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/depend
 	$(MAKE) -f F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/build.make F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=31,32 "Built target Fw_Prm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=31,32,33 "Built target Fw_Prm"
 .PHONY : F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/rule
@@ -885,12 +882,12 @@ F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/all: F-Prime/Fw/Types/CMakeFiles/ar
 F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/build.make F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/depend
 	$(MAKE) -f F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/build.make F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target Fw_ComFile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=22 "Built target Fw_ComFile"
 .PHONY : F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Fw/ComFile/CMakeFiles/Fw_ComFile.dir/rule
@@ -938,12 +935,12 @@ F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
 F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/build.make F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/depend
 	$(MAKE) -f F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/build.make F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=22 "Built target Fw_Comp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=23 "Built target Fw_Comp"
 .PHONY : F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/rule
@@ -1085,7 +1082,7 @@ F-Prime/Fw/Types/preinstall: F-Prime/Fw/Types/GTest/preinstall
 F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/all:
 	$(MAKE) -f F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/build.make F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/depend
 	$(MAKE) -f F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/build.make F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=85,86,87,88,89,90,91 "Built target arduinocore"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=86,87,88,89,90,91,92 "Built target arduinocore"
 .PHONY : F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1187,7 +1184,7 @@ F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/all: F-Prime/Fw/Types/CMakeFi
 F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/all: F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/all
 	$(MAKE) -f F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/build.make F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/depend
 	$(MAKE) -f F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/build.make F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=23,24,25 "Built target Fw_FilePacket"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=24,25 "Built target Fw_FilePacket"
 .PHONY : F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1253,12 +1250,12 @@ F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/all: F-Prime/Fw/T
 F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/build.make F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/depend
 	$(MAKE) -f F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/build.make F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=33 "Built target Fw_SerializableFile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target Fw_SerializableFile"
 .PHONY : F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Fw/SerializableFile/CMakeFiles/Fw_SerializableFile.dir/rule
@@ -1411,12 +1408,12 @@ F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
 F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/build.make F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/depend
 	$(MAKE) -f F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/build.make F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=54 "Built target Svc_Cycle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=55 "Built target Svc_Cycle"
 .PHONY : F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/rule
@@ -1462,7 +1459,7 @@ F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/all: F-Prime/Fw/Types/CMakeFiles/ardu
 F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/build.make F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/depend
 	$(MAKE) -f F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/build.make F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=55 "Built target Svc_Fatal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=56 "Built target Svc_Fatal"
 .PHONY : F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1513,7 +1510,7 @@ F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/all: F-Prime/Fw/Types/CMakeFiles/arduin
 F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/build.make F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/depend
 	$(MAKE) -f F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/build.make F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=71 "Built target Svc_Ping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=72 "Built target Svc_Ping"
 .PHONY : F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1565,7 +1562,7 @@ F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/all: F-Prime/Fw/Types/CMakeFiles/ar
 F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/build.make F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/depend
 	$(MAKE) -f F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/build.make F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=73 "Built target Svc_PolyIf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=74 "Built target Svc_PolyIf"
 .PHONY : F-Prime/Svc/PolyIf/CMakeFiles/Svc_PolyIf.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1616,7 +1613,7 @@ F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/all: F-Prime/Fw/Types/CMakeFiles/ardu
 F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/build.make F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/depend
 	$(MAKE) -f F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/build.make F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=77 "Built target Svc_Sched"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=78 "Built target Svc_Sched"
 .PHONY : F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1667,7 +1664,7 @@ F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/all: F-Prime/Fw/Types/CMakeFiles/arduinoc
 F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/build.make F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/depend
 	$(MAKE) -f F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/build.make F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=78 "Built target Svc_Seq"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=79 "Built target Svc_Seq"
 .PHONY : F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1718,7 +1715,7 @@ F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/all: F-Prime/Fw/Types/CMakeFile
 F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/build.make F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/depend
 	$(MAKE) -f F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/build.make F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=82 "Built target Svc_WatchDog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=83 "Built target Svc_WatchDog"
 .PHONY : F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1778,12 +1775,12 @@ F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/all: F-Prime/Os/CMakeFi
 F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/build.make F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/depend
 	$(MAKE) -f F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/build.make F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=44 "Built target Svc_ActiveLogger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=45 "Built target Svc_ActiveLogger"
 .PHONY : F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/rule
@@ -1839,7 +1836,7 @@ F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/all: F-Prime/Os/C
 F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/build.make F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/depend
 	$(MAKE) -f F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/build.make F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=45,46 "Built target Svc_ActiveRateGroup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=46 "Built target Svc_ActiveRateGroup"
 .PHONY : F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1896,12 +1893,12 @@ F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/all: F-Prim
 F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/build.make F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/depend
 	$(MAKE) -f F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/build.make F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=47 "Built target Svc_AssertFatalAdapter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=47,48 "Built target Svc_AssertFatalAdapter"
 .PHONY : F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/rule
@@ -1955,12 +1952,12 @@ F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/all: F-Prime/Os/CMake
 F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/build.make F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/depend
 	$(MAKE) -f F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/build.make F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=48 "Built target Svc_BufferManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=49 "Built target Svc_BufferManager"
 .PHONY : F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 33
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 34
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/rule
@@ -2014,12 +2011,12 @@ F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/all: F-Prime/Os/CMakeFiles/Os
 F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/build.make F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/depend
 	$(MAKE) -f F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/build.make F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=53 "Built target Svc_ComLogger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=54 "Built target Svc_ComLogger"
 .PHONY : F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 33
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 34
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/ComLogger/CMakeFiles/Svc_ComLogger.dir/rule
@@ -2074,7 +2071,7 @@ F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/all: F-Prime/Os/CMake
 F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/build.make F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/depend
 	$(MAKE) -f F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/build.make F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=49,50 "Built target Svc_CmdDispatcher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=50 "Built target Svc_CmdDispatcher"
 .PHONY : F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2136,12 +2133,12 @@ F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/all: F-Prime/Os/CMakeFi
 F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/build.make F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/depend
 	$(MAKE) -f F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/build.make F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=51,52 "Built target Svc_CmdSequencer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=51,52,53 "Built target Svc_CmdSequencer"
 .PHONY : F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 40
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/rule
@@ -2191,12 +2188,12 @@ F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/all: F-Prime/Os/CMakeFi
 F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/build.make F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/depend
 	$(MAKE) -f F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/build.make F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=56,57 "Built target Svc_FatalHandler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=57,58 "Built target Svc_FatalHandler"
 .PHONY : F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/rule
@@ -2254,12 +2251,12 @@ F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/all: F-Prime/CFDP/Check
 F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/build.make F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/depend
 	$(MAKE) -f F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/build.make F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=58,59 "Built target Svc_FileDownlink"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=59,60 "Built target Svc_FileDownlink"
 .PHONY : F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 41
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 42
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/rule
@@ -2317,12 +2314,12 @@ F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/all: F-Prime/CFDP/Checksu
 F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/build.make F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/depend
 	$(MAKE) -f F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/build.make F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=60 "Built target Svc_FileManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=61 "Built target Svc_FileManager"
 .PHONY : F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 41
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/FileManager/CMakeFiles/Svc_FileManager.dir/rule
@@ -2379,12 +2376,12 @@ F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/all: F-Prime/CFDP/Checksum/
 F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/build.make F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/depend
 	$(MAKE) -f F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/build.make F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=61,62 "Built target Svc_FileUplink"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=62,63 "Built target Svc_FileUplink"
 .PHONY : F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 38
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 39
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/rule
@@ -2438,12 +2435,12 @@ F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
 F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/build.make F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/depend
 	$(MAKE) -f F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/build.make F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=63 "Built target Svc_GndIf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=64 "Built target Svc_GndIf"
 .PHONY : F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/GndIf/CMakeFiles/Svc_GndIf.dir/rule
@@ -2498,7 +2495,7 @@ F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/all: F-Prime/Util
 F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/all: F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/all
 	$(MAKE) -f F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/build.make F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/depend
 	$(MAKE) -f F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/build.make F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=64,65 "Built target Svc_GroundInterface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=65,66 "Built target Svc_GroundInterface"
 .PHONY : F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2560,12 +2557,12 @@ F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/all: F-Prime/Os/CMakeFiles/Os.dir/a
 F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/build.make F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/depend
 	$(MAKE) -f F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/build.make F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=66 "Built target Svc_Health"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=67 "Built target Svc_Health"
 .PHONY : F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 37
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/rule
@@ -2616,12 +2613,12 @@ F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/all: F-Prime/Os/CMakeFiles/Os
 F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/build.make F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/depend
 	$(MAKE) -f F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/build.make F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=67 "Built target Svc_LinuxTime"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=68 "Built target Svc_LinuxTime"
 .PHONY : F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/rule
@@ -2671,12 +2668,12 @@ F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/all: F-Prime/Os/CMakeFiles/
 F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/build.make F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/depend
 	$(MAKE) -f F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/build.make F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=68 "Built target Svc_LinuxTimer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=69 "Built target Svc_LinuxTimer"
 .PHONY : F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/LinuxTimer/CMakeFiles/Svc_LinuxTimer.dir/rule
@@ -2729,12 +2726,12 @@ F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir
 F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/build.make F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/depend
 	$(MAKE) -f F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/build.make F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=69 "Built target Svc_PassiveConsoleTextLogger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=70 "Built target Svc_PassiveConsoleTextLogger"
 .PHONY : F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 30
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 31
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/PassiveConsoleTextLogger/CMakeFiles/Svc_PassiveConsoleTextLogger.dir/rule
@@ -2786,12 +2783,12 @@ F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/all: F-Prime/
 F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/build.make F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/depend
 	$(MAKE) -f F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/build.make F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=70 "Built target Svc_PassiveTextLogger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=71 "Built target Svc_PassiveTextLogger"
 .PHONY : F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 29
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 30
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/PassiveTextLogger/CMakeFiles/Svc_PassiveTextLogger.dir/rule
@@ -2842,12 +2839,12 @@ F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/all: F-Prime/Os/CMakeFiles/Os.dir/a
 F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/build.make F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/depend
 	$(MAKE) -f F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/build.make F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=72 "Built target Svc_PolyDb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=73 "Built target Svc_PolyDb"
 .PHONY : F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/PolyDb/CMakeFiles/Svc_PolyDb.dir/rule
@@ -2902,12 +2899,12 @@ F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
 F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/build.make F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/depend
 	$(MAKE) -f F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/build.make F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=74,75 "Built target Svc_PrmDb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=75,76 "Built target Svc_PrmDb"
 .PHONY : F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 36
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/rule
@@ -2957,12 +2954,12 @@ F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/all: F-Prime/Os/C
 F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/build.make F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/depend
 	$(MAKE) -f F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/build.make F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=76 "Built target Svc_RateGroupDriver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=77 "Built target Svc_RateGroupDriver"
 .PHONY : F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/rule
@@ -3012,12 +3009,12 @@ F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
 F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/build.make F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/depend
 	$(MAKE) -f F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/build.make F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=79 "Built target Svc_Time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=80 "Built target Svc_Time"
 .PHONY : F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/rule
@@ -3071,12 +3068,12 @@ F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/all: F-Prime/Os/CMakeFiles/Os.dir
 F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/build.make F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/depend
 	$(MAKE) -f F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/build.make F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=80,81 "Built target Svc_TlmChan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=81,82 "Built target Svc_TlmChan"
 .PHONY : F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 32
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 33
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/rule
@@ -3128,7 +3125,7 @@ F-Prime/Os/CMakeFiles/Os.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/a
 
 # Build rule for subdir invocation for target.
 F-Prime/Os/CMakeFiles/Os.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Os/CMakeFiles/Os.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Os/CMakeFiles/Os.dir/rule
@@ -3173,12 +3170,12 @@ F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/all: F-Pr
 F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/build.make F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/depend
 	$(MAKE) -f F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/build.make F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target Os_Baremetal_TaskRunner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=44 "Built target Os_Baremetal_TaskRunner"
 .PHONY : F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/rule
@@ -3484,7 +3481,7 @@ F-Prime/Drv/BlockDriver/CMakeFiles/Drv_BlockDriver.dir/all: F-Prime/Utils/Hash/C
 
 # Build rule for subdir invocation for target.
 F-Prime/Drv/BlockDriver/CMakeFiles/Drv_BlockDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Drv/BlockDriver/CMakeFiles/Drv_BlockDriver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Drv/BlockDriver/CMakeFiles/Drv_BlockDriver.dir/rule
@@ -3538,7 +3535,7 @@ F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/all: F-Prime/Drv/
 F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/build.make F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/depend
 	$(MAKE) -f F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/build.make F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=8,9 "Built target Drv_LinuxGpioDriver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=8 "Built target Drv_LinuxGpioDriver"
 .PHONY : F-Prime/Drv/LinuxGpioDriver/CMakeFiles/Drv_LinuxGpioDriver.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3598,12 +3595,12 @@ F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/all: F-Prime/
 F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/build.make F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/depend
 	$(MAKE) -f F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/build.make F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=10 "Built target Drv_LinuxSerialDriver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=9,10 "Built target Drv_LinuxSerialDriver"
 .PHONY : F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 35
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 37
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Drv/LinuxSerialDriver/CMakeFiles/Drv_LinuxSerialDriver.dir/rule
@@ -3663,7 +3660,7 @@ F-Prime/Drv/LinuxSpiDriver/CMakeFiles/Drv_LinuxSpiDriver.dir/all: F-Prime/Utils/
 
 # Build rule for subdir invocation for target.
 F-Prime/Drv/LinuxSpiDriver/CMakeFiles/Drv_LinuxSpiDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 35
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Drv/LinuxSpiDriver/CMakeFiles/Drv_LinuxSpiDriver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Drv/LinuxSpiDriver/CMakeFiles/Drv_LinuxSpiDriver.dir/rule
@@ -3726,12 +3723,12 @@ F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/all: F-Prime/Fw/Types/CMakeFi
 F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/build.make F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/depend
 	$(MAKE) -f F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/build.make F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target CFDP_Checksum"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=3 "Built target CFDP_Checksum"
 .PHONY : F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/rule
@@ -3813,12 +3810,12 @@ F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all: F-Prime/Fw/Types/CMakeFiles/ar
 F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/build.make F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/depend
 	$(MAKE) -f F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/build.make F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=83 "Built target Utils_Hash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=84,85 "Built target Utils_Hash"
 .PHONY : F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/rule
@@ -3861,12 +3858,12 @@ F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/all: F-Prime/Fw/Types/CMakeFiles/
 F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
 	$(MAKE) -f F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/build.make F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/depend
 	$(MAKE) -f F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/build.make F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=84 "Built target Utils_Types"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target Utils_Types"
 .PHONY : F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/all
 
 # Build rule for subdir invocation for target.
 F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/rule
@@ -3880,62 +3877,6 @@ Utils_Types: F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/rule
 F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/clean:
 	$(MAKE) -f F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/build.make F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/clean
 .PHONY : F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/clean
-
-#=============================================================================
-# Directory level rules for directory examples/ArduinoGpsTracker/SerialDriver
-
-# Recursive "all" directory target.
-examples/ArduinoGpsTracker/SerialDriver/all: examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all
-
-.PHONY : examples/ArduinoGpsTracker/SerialDriver/all
-
-# Recursive "clean" directory target.
-examples/ArduinoGpsTracker/SerialDriver/clean: examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/clean
-
-.PHONY : examples/ArduinoGpsTracker/SerialDriver/clean
-
-# Recursive "preinstall" directory target.
-examples/ArduinoGpsTracker/SerialDriver/preinstall:
-
-.PHONY : examples/ArduinoGpsTracker/SerialDriver/preinstall
-
-#=============================================================================
-# Target rules for target examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir
-
-# All Build rule for target.
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Logger/CMakeFiles/Fw_Logger.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Cfg/CMakeFiles/Fw_Cfg.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Obj/CMakeFiles/Fw_Obj.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Port/CMakeFiles/Fw_Port.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
-	$(MAKE) -f examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/build.make examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/depend
-	$(MAKE) -f examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/build.make examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=99,100 "Built target examples_ArduinoGpsTracker_SerialDriver"
-.PHONY : examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all
-
-# Build rule for subdir invocation for target.
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 28
-	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
-.PHONY : examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/rule
-
-# Convenience name for target.
-examples_ArduinoGpsTracker_SerialDriver: examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/rule
-
-.PHONY : examples_ArduinoGpsTracker_SerialDriver
-
-# clean rule for target.
-examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/clean:
-	$(MAKE) -f examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/build.make examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/clean
-.PHONY : examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/clean
 
 #=============================================================================
 # Directory level rules for directory examples/ArduinoGpsTracker/HardwareRateDriver
@@ -3972,12 +3913,12 @@ examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTrac
 examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/build.make examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/depend
 	$(MAKE) -f examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/build.make examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=96 "Built target examples_ArduinoGpsTracker_HardwareRateDriver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=97,98 "Built target examples_ArduinoGpsTracker_HardwareRateDriver"
 .PHONY : examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/all
 
 # Build rule for subdir invocation for target.
 examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/rule
@@ -4027,12 +3968,12 @@ examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedB
 examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
 	$(MAKE) -f examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/build.make examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/depend
 	$(MAKE) -f examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/build.make examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=97,98 "Built target examples_ArduinoGpsTracker_LedBlinker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=99,100 "Built target examples_ArduinoGpsTracker_LedBlinker"
 .PHONY : examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/all
 
 # Build rule for subdir invocation for target.
 examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
 .PHONY : examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/rule
@@ -4048,179 +3989,157 @@ examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedB
 .PHONY : examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/clean
 
 #=============================================================================
-# Directory level rules for directory examples/ArduinoBlink/Top
+# Directory level rules for directory examples/BlinkOne/Top
 
 # Recursive "all" directory target.
-examples/ArduinoBlink/Top/all: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all
-examples/ArduinoBlink/Top/all: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/all
+examples/BlinkOne/Top/all: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all
+examples/BlinkOne/Top/all: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/all
 
-.PHONY : examples/ArduinoBlink/Top/all
+.PHONY : examples/BlinkOne/Top/all
 
 # Recursive "clean" directory target.
-examples/ArduinoBlink/Top/clean: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/clean
-examples/ArduinoBlink/Top/clean: examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean
-examples/ArduinoBlink/Top/clean: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/clean
-examples/ArduinoBlink/Top/clean: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/clean
+examples/BlinkOne/Top/clean: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/clean
+examples/BlinkOne/Top/clean: examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean
+examples/BlinkOne/Top/clean: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/clean
+examples/BlinkOne/Top/clean: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/clean
 
-.PHONY : examples/ArduinoBlink/Top/clean
+.PHONY : examples/BlinkOne/Top/clean
 
 # Recursive "preinstall" directory target.
-examples/ArduinoBlink/Top/preinstall:
+examples/BlinkOne/Top/preinstall:
 
-.PHONY : examples/ArduinoBlink/Top/preinstall
+.PHONY : examples/BlinkOne/Top/preinstall
 
 #=============================================================================
-# Target rules for target examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir
+# Target rules for target examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir
 
 # All Build rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Buffer/CMakeFiles/Fw_Buffer.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Com/CMakeFiles/Fw_Com.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Cmd/CMakeFiles/Fw_Cmd.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Log/CMakeFiles/Fw_Log.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Logger/CMakeFiles/Fw_Logger.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Time/CMakeFiles/Fw_Time.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Tlm/CMakeFiles/Fw_Tlm.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Prm/CMakeFiles/Fw_Prm.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Cfg/CMakeFiles/Fw_Cfg.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Obj/CMakeFiles/Fw_Obj.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Port/CMakeFiles/Fw_Port.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/FilePacket/CMakeFiles/Fw_FilePacket.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Fatal/CMakeFiles/Svc_Fatal.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Seq/CMakeFiles/Svc_Seq.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/WatchDog/CMakeFiles/Svc_WatchDog.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/ActiveLogger/CMakeFiles/Svc_ActiveLogger.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/AssertFatalAdapter/CMakeFiles/Svc_AssertFatalAdapter.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/BufferManager/CMakeFiles/Svc_BufferManager.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/CmdDispatcher/CMakeFiles/Svc_CmdDispatcher.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/CmdSequencer/CMakeFiles/Svc_CmdSequencer.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/FatalHandler/CMakeFiles/Svc_FatalHandler.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/FileDownlink/CMakeFiles/Svc_FileDownlink.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/FileUplink/CMakeFiles/Svc_FileUplink.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/GroundInterface/CMakeFiles/Svc_GroundInterface.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Health/CMakeFiles/Svc_Health.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/PrmDb/CMakeFiles/Svc_PrmDb.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/TlmChan/CMakeFiles/Svc_TlmChan.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/CFDP/Checksum/CMakeFiles/CFDP_Checksum.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Utils/Types/CMakeFiles/Utils_Types.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/all
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all: examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/all
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/depend
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/build
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Com/CMakeFiles/Fw_Com.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Log/CMakeFiles/Fw_Log.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Logger/CMakeFiles/Fw_Logger.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Time/CMakeFiles/Fw_Time.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Tlm/CMakeFiles/Fw_Tlm.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Cfg/CMakeFiles/Fw_Cfg.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Comp/CMakeFiles/Fw_Comp.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Obj/CMakeFiles/Fw_Obj.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Port/CMakeFiles/Fw_Port.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Types/CMakeFiles/arduinocore.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Fw/Types/CMakeFiles/Fw_Types.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Cycle/CMakeFiles/Svc_Cycle.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Ping/CMakeFiles/Svc_Ping.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Sched/CMakeFiles/Svc_Sched.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/ActiveRateGroup/CMakeFiles/Svc_ActiveRateGroup.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/LinuxTime/CMakeFiles/Svc_LinuxTime.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/RateGroupDriver/CMakeFiles/Svc_RateGroupDriver.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Svc/Time/CMakeFiles/Svc_Time.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Os/CMakeFiles/Os.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Os/Baremetal/TaskRunner/CMakeFiles/Os_Baremetal_TaskRunner.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: F-Prime/Utils/Hash/CMakeFiles/Utils_Hash.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: examples/ArduinoGpsTracker/HardwareRateDriver/CMakeFiles/examples_ArduinoGpsTracker_HardwareRateDriver.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all: examples/ArduinoGpsTracker/LedBlinker/CMakeFiles/examples_ArduinoGpsTracker_LedBlinker.dir/all
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/depend
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=1 "Built target ArduinoBlink"
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all
 
 # Build rule for subdir invocation for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 78
-	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 44
+	$(MAKE) -f CMakeFiles/Makefile2 examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/rule
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/rule
 
 # Convenience name for target.
-ArduinoBlink: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/rule
+ArduinoBlink: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/rule
 
 .PHONY : ArduinoBlink
 
 # clean rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/clean:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/clean
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/clean
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/clean:
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/clean
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/clean
 
 #=============================================================================
-# Target rules for target examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir
+# Target rules for target examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir
 
 # All Build rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all: F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/depend
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target ArduinoTopologyAppAi_ArduinoBlink_dict"
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all: F-Prime/Autocoders/Python/src/fprime_ac/generators/templates/CMakeFiles/codegen.dir/all
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/depend
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=2 "Built target ArduinoTopologyAppAi_ArduinoBlink_dict"
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all
 
 # Build rule for subdir invocation for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/rule
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/rule
 
 # Convenience name for target.
-ArduinoTopologyAppAi_ArduinoBlink_dict: examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/rule
+ArduinoTopologyAppAi_ArduinoBlink_dict: examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/rule
 
 .PHONY : ArduinoTopologyAppAi_ArduinoBlink_dict
 
 # clean rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean
+examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean:
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/clean
 
 #=============================================================================
-# Target rules for target examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir
+# Target rules for target examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir
 
 # All Build rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/all: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/all
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/depend
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num=2 "Built target ArduinoBlink_hex"
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/all: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/all
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/depend
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target ArduinoBlink_hex"
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/all
 
 # Build rule for subdir invocation for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 79
-	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 44
+	$(MAKE) -f CMakeFiles/Makefile2 examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/rule
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/rule
 
 # Convenience name for target.
-ArduinoBlink_hex: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/rule
+ArduinoBlink_hex: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/rule
 
 .PHONY : ArduinoBlink_hex
 
 # clean rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/clean:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/clean
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/clean
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/clean:
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/clean
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/clean
 
 #=============================================================================
-# Target rules for target examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir
+# Target rules for target examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir
 
 # All Build rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/all: examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/depend
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/build
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/all: examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/all
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/depend
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vagrant/src/sterling/HopesAndDreams/CMakeFiles --progress-num= "Built target ArduinoBlink_dict"
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/all
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/all
 
 # Build rule for subdir invocation for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/all
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 5
+	$(MAKE) -f CMakeFiles/Makefile2 examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/src/sterling/HopesAndDreams/CMakeFiles 0
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/rule
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/rule
 
 # Convenience name for target.
-ArduinoBlink_dict: examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/rule
+ArduinoBlink_dict: examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/rule
 
 .PHONY : ArduinoBlink_dict
 
 # clean rule for target.
-examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/clean:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/clean
-.PHONY : examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/clean
+examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/clean:
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/clean
+.PHONY : examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

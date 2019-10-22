@@ -8,11 +8,25 @@
 
 /home/vagrant/src/sterling/Fw/Cfg/Config.hpp
 
+/home/vagrant/src/sterling/Fw/Com/ComBuffer.cpp
+Fw/Com/ComBuffer.hpp
+-
+Fw/Types/Assert.hpp
+-
+
 /home/vagrant/src/sterling/Fw/Com/ComBuffer.hpp
 Fw/Cfg/Config.hpp
 -
 Fw/Types/BasicTypes.hpp
 -
+Fw/Types/Serializable.hpp
+-
+
+/home/vagrant/src/sterling/Fw/Com/ComPacket.cpp
+Fw/Com/ComPacket.hpp
+-
+
+/home/vagrant/src/sterling/Fw/Com/ComPacket.hpp
 Fw/Types/Serializable.hpp
 -
 

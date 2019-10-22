@@ -30,7 +30,7 @@ ARDUINO_VERSION:STRING=ATmega2560
 ArduinoBlink_BINARY_DIR:STATIC=/home/vagrant/src/sterling/HopesAndDreams
 
 //Value Computed by CMake
-ArduinoBlink_SOURCE_DIR:STATIC=/home/vagrant/src/sterling/examples/ArduinoBlink
+ArduinoBlink_SOURCE_DIR:STATIC=/home/vagrant/src/sterling/examples/BlinkOne
 
 //Dependencies for the target
 CFDP_Checksum_LIB_DEPENDS:STATIC=general;Fw_Cfg;general;Fw_Types;
@@ -163,7 +163,7 @@ CMAKE_EXE_LINKER_FLAGS_TESTING:STRING=
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //Install dir
-CMAKE_INSTALL_PREFIX:PATH=/home/vagrant/src/sterling/examples/ArduinoBlink
+CMAKE_INSTALL_PREFIX:PATH=/home/vagrant/src/sterling/examples/BlinkOne
 
 //linker
 CMAKE_LINKER:PATH=/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-ld
@@ -268,8 +268,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //strip
 CMAKE_STRIP:PATH=/opt/arduino-1.8.9/hardware/tools/avr/bin/avr-strip
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=../cmake/toolchain/ArduinoMega.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/vagrant/src/sterling/cmake/toolchain/ArduinoMega.cmake
 
 //Try Static Lib Type
 CMAKE_TRY_COMPILE_TARGET_TYPE:STRING=STATIC_LIBRARY
@@ -281,7 +281,7 @@ CMAKE_TRY_COMPILE_TARGET_TYPE:STRING=STATIC_LIBRARY
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Dependencies for the target
-Drv_BlockDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Drv_DataTypes;general;Svc_Sched;general;Svc_Cycle;general;Svc_Ping;
+Drv_BlockDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Svc_Sched;general;Drv_DataTypes;general;Svc_Cycle;
 
 //Dependencies for the target
 Drv_DataTypes_LIB_DEPENDS:STATIC=general;Fw_Port;general;Fw_Types;general;Fw_Cfg;
@@ -290,10 +290,10 @@ Drv_DataTypes_LIB_DEPENDS:STATIC=general;Fw_Port;general;Fw_Types;general;Fw_Cfg
 Drv_GpioDriverPorts_LIB_DEPENDS:STATIC=general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;
 
 //Dependencies for the target
-Drv_LinuxGpioDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Drv_GpioDriverPorts;general;Svc_Cycle;
+Drv_LinuxGpioDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Cycle;general;Drv_GpioDriverPorts;
 
 //Dependencies for the target
-Drv_LinuxSerialDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Drv_SerialDriverPorts;general;Fw_Buffer;
+Drv_LinuxSerialDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Buffer;general;Drv_SerialDriverPorts;
 
 //Dependencies for the target
 Drv_LinuxSpiDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Drv_SpiDriverPorts;
@@ -365,10 +365,10 @@ Os_LIB_DEPENDS:STATIC=general;Fw_Cfg;general;Fw_Types;general;Fw_Logger;general;
 SKIP_TOOLS_CHECK:BOOL=OFF
 
 //Dependencies for the target
-Svc_ActiveLogger_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Fatal;general;Svc_Ping;
+Svc_ActiveLogger_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Svc_Fatal;
 
 //Dependencies for the target
-Svc_ActiveRateGroup_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Svc_Sched;general;Svc_Cycle;
+Svc_ActiveRateGroup_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Cycle;general;Svc_Ping;general;Svc_Sched;
 
 //Dependencies for the target
 Svc_AssertFatalAdapter_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Types;general;Fw_Cfg;
@@ -380,7 +380,7 @@ Svc_BufferManager_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;g
 Svc_CmdDispatcher_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;
 
 //Dependencies for the target
-Svc_CmdSequencer_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Sched;general;Svc_Ping;general;Svc_Seq;
+Svc_CmdSequencer_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Sched;general;Svc_Seq;general;Svc_Ping;
 
 //Dependencies for the target
 Svc_ComLogger_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;
@@ -395,13 +395,13 @@ Svc_FatalHandler_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Port;general;Fw_T
 Svc_Fatal_LIB_DEPENDS:STATIC=general;Fw_Port;general;Fw_Types;general;Fw_Cfg;
 
 //Dependencies for the target
-Svc_FileDownlink_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Buffer;general;Svc_Ping;general;Os;general;Fw_FilePacket;general;Utils_Hash;general;CFDP_Checksum;
+Svc_FileDownlink_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Fw_Buffer;general;Os;general;Fw_FilePacket;general;Utils_Hash;general;CFDP_Checksum;
 
 //Dependencies for the target
 Svc_FileManager_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Os;general;Fw_FilePacket;general;Utils_Hash;general;CFDP_Checksum;
 
 //Dependencies for the target
-Svc_FileUplink_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Fw_Buffer;general;Os;general;Fw_Buffer;general;Fw_FilePacket;general;Utils_Hash;general;CFDP_Checksum;
+Svc_FileUplink_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Buffer;general;Svc_Ping;general;Os;general;Fw_Buffer;general;Fw_FilePacket;general;Utils_Hash;general;CFDP_Checksum;
 
 //Dependencies for the target
 Svc_GndIf_LIB_DEPENDS:STATIC=general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Comp;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Buffer;
@@ -410,7 +410,7 @@ Svc_GndIf_LIB_DEPENDS:STATIC=general;Fw_Port;general;Fw_Types;general;Fw_Cfg;gen
 Svc_GroundInterface_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Log;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Buffer;general;Svc_Sched;general;Utils_Types;
 
 //Dependencies for the target
-Svc_Health_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Svc_Sched;general;Svc_WatchDog;
+Svc_Health_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Os;general;Fw_Tlm;general;Fw_Log;general;Fw_Cmd;general;Fw_Com;general;Fw_Time;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Ping;general;Svc_WatchDog;general;Svc_Sched;
 
 //Dependencies for the target
 Svc_LinuxTime_LIB_DEPENDS:STATIC=general;Svc_Time;
@@ -468,9 +468,6 @@ examples_ArduinoGpsTracker_HardwareRateDriver_LIB_DEPENDS:STATIC=general;Fw_Comp
 
 //Dependencies for the target
 examples_ArduinoGpsTracker_LedBlinker_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Svc_Sched;
-
-//Dependencies for the target
-examples_ArduinoGpsTracker_SerialDriver_LIB_DEPENDS:STATIC=general;Fw_Comp;general;Fw_Port;general;Fw_Types;general;Fw_Cfg;general;Fw_Buffer;general;Svc_Sched;general;arduinocore;general;m;
 
 
 ########################
@@ -578,7 +575,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/vagrant/src/sterling/examples/ArduinoBlink
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/vagrant/src/sterling/examples/BlinkOne
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -596,7 +593,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=79
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=78
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

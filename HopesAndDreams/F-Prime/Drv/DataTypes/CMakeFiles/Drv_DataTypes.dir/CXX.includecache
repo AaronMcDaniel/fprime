@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/vagrant/src/sterling/Drv/DataTypes/DataBuffer.cpp
+Drv/DataTypes/DataBuffer.hpp
+-
+Fw/Types/Assert.hpp
+-
+
 /home/vagrant/src/sterling/Drv/DataTypes/DataBuffer.hpp
 Fw/Types/BasicTypes.hpp
 -

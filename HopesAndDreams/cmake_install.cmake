@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/src/sterling/examples/ArduinoBlink
+# Install script for directory: /home/vagrant/src/sterling/examples/BlinkOne
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/src/sterling/examples/ArduinoBlink")
+  set(CMAKE_INSTALL_PREFIX "/home/vagrant/src/sterling/examples/BlinkOne")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -41,10 +41,9 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/vagrant/src/sterling/HopesAndDreams/F-Prime/Drv/cmake_install.cmake")
   include("/home/vagrant/src/sterling/HopesAndDreams/F-Prime/CFDP/cmake_install.cmake")
   include("/home/vagrant/src/sterling/HopesAndDreams/F-Prime/Utils/cmake_install.cmake")
-  include("/home/vagrant/src/sterling/HopesAndDreams/examples/ArduinoGpsTracker/SerialDriver/cmake_install.cmake")
   include("/home/vagrant/src/sterling/HopesAndDreams/examples/ArduinoGpsTracker/HardwareRateDriver/cmake_install.cmake")
   include("/home/vagrant/src/sterling/HopesAndDreams/examples/ArduinoGpsTracker/LedBlinker/cmake_install.cmake")
-  include("/home/vagrant/src/sterling/HopesAndDreams/examples/ArduinoBlink/Top/cmake_install.cmake")
+  include("/home/vagrant/src/sterling/HopesAndDreams/examples/BlinkOne/Top/cmake_install.cmake")
 
 endif()
 

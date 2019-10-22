@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-4.4.0-161-generic")
+set(CMAKE_HOST_SYSTEM "Linux-4.4.0-164-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "4.4.0-161-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "4.4.0-164-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/vagrant/src/sterling/cmake/toolchain/ArduinoMega.cmake")

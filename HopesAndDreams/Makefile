@@ -48,7 +48,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/src/sterling/examples/ArduinoBlink
+CMAKE_SOURCE_DIR = /home/vagrant/src/sterling/examples/BlinkOne
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/vagrant/src/sterling/HopesAndDreams
@@ -989,19 +989,6 @@ Utils_Types/fast:
 .PHONY : Utils_Types/fast
 
 #=============================================================================
-# Target rules for targets named examples_ArduinoGpsTracker_SerialDriver
-
-# Build rule for target.
-examples_ArduinoGpsTracker_SerialDriver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 examples_ArduinoGpsTracker_SerialDriver
-.PHONY : examples_ArduinoGpsTracker_SerialDriver
-
-# fast build rule for target.
-examples_ArduinoGpsTracker_SerialDriver/fast:
-	$(MAKE) -f examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/build.make examples/ArduinoGpsTracker/SerialDriver/CMakeFiles/examples_ArduinoGpsTracker_SerialDriver.dir/build
-.PHONY : examples_ArduinoGpsTracker_SerialDriver/fast
-
-#=============================================================================
 # Target rules for targets named examples_ArduinoGpsTracker_HardwareRateDriver
 
 # Build rule for target.
@@ -1037,7 +1024,7 @@ ArduinoBlink: cmake_check_build_system
 
 # fast build rule for target.
 ArduinoBlink/fast:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink.dir/build
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink.dir/build
 .PHONY : ArduinoBlink/fast
 
 #=============================================================================
@@ -1050,7 +1037,7 @@ ArduinoTopologyAppAi_ArduinoBlink_dict: cmake_check_build_system
 
 # fast build rule for target.
 ArduinoTopologyAppAi_ArduinoBlink_dict/fast:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoTopologyAppAi_ArduinoBlink_dict.dir/build
 .PHONY : ArduinoTopologyAppAi_ArduinoBlink_dict/fast
 
 #=============================================================================
@@ -1063,7 +1050,7 @@ ArduinoBlink_hex: cmake_check_build_system
 
 # fast build rule for target.
 ArduinoBlink_hex/fast:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_hex.dir/build
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_hex.dir/build
 .PHONY : ArduinoBlink_hex/fast
 
 #=============================================================================
@@ -1076,7 +1063,7 @@ ArduinoBlink_dict: cmake_check_build_system
 
 # fast build rule for target.
 ArduinoBlink_dict/fast:
-	$(MAKE) -f examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/ArduinoBlink/Top/CMakeFiles/ArduinoBlink_dict.dir/build
+	$(MAKE) -f examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/build.make examples/BlinkOne/Top/CMakeFiles/ArduinoBlink_dict.dir/build
 .PHONY : ArduinoBlink_dict/fast
 
 # Help Target
@@ -1155,7 +1142,6 @@ help:
 	@echo "... CFDP_Checksum"
 	@echo "... Utils_Hash"
 	@echo "... Utils_Types"
-	@echo "... examples_ArduinoGpsTracker_SerialDriver"
 	@echo "... examples_ArduinoGpsTracker_HardwareRateDriver"
 	@echo "... examples_ArduinoGpsTracker_LedBlinker"
 	@echo "... ArduinoBlink"

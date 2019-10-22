@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Autocoders/Python/schema/ISF/component_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<component name="ATMegaI2CDriver" kind="passive" namespace="Drv" modeler="true">
+
+  <import_port_type>Fw/Time/TimePortAi.xml</import_port_type>
+  <import_port_type>Drv/I2CDriverPorts/I2CReadPortAi.xml</import_port_type>
+  <import_port_type>Drv/I2CDriverPorts/I2CWritePortAi.xml</import_port_type>
+
+  <ports>
+    <port name="Time" data_type="Fw::Time" kind="output" role="TimeGet" max_number="1"></port>
+    <port name="i2c_write" data_type="Drv::I2CRead" kind="sync_input" max_number="1"></port>
+    <port name="i2c_read" data_type="Drv::I2CWrite" kind="output" max_number="1"></port>
+  </ports>
+
+</component>

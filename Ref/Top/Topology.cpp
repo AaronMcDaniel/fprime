@@ -72,6 +72,8 @@ Svc::PrmDbImpl prmDb("PRM","PrmDb.dat");
 
 Ref::PingReceiverComponentImpl pingRcvr("PngRecv");
 
+Ref::RateMultiplexerComponentImpl ratePlexer("rtPlexer");
+
 Drv::SocketIpDriverComponentImpl socketIpDriver("SocketIpDriver");
 
 Svc::FileUplink fileUplink ("fileUplink");
@@ -154,6 +156,7 @@ bool constructApp(bool dump, U32 port_number, char* hostname) {
 	fatalHandler.init(0);
 	health.init(25,0);
 	pingRcvr.init(10);
+    ratePlexer.init(10);
     // Connect rate groups to rate group driver
     constructRefArchitecture();
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Autocoders/schema/ISF/component_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<component name="RateMultiplexer" kind="passive" namespace="Ref" >
+	<import_port_type>Svc/Sched/SchedPortAi.xml</import_port_type>
+	<import_port_type>Ref/RateMultiplexer/ChangeTimerPortAi.xml</import_port_type>
+	<comment>
+		Component forwards Shed calls to components subscribed
+		to the originating rate group.
+	</comment>
+
+	<ports>
+		<port name="Input10Hz" data_type="Svc::Sched" kind="input">
+			<comment>
+			This is the input port for Sched types from the 10Hz rate group
+			</comment>
+		</port>
+		<port name="OutputLedBlinker" data_type="Svc::Sched" kind="output">
+			<comment>
+			This is the output port for Sched types intended for the LedBlinker component
+			</comment>
+		</port>
+		<port name= "ChangeRatePort" data_type = "Ref::ChangeTimer" kind= "input">
+			<comment>
+			Port used to configure a component's rate group
+			</comment>
+		</port>
+	</ports>
+</component>

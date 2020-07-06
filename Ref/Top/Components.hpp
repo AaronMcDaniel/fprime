@@ -18,6 +18,7 @@
 
 #include <Ref/RecvBuffApp/RecvBuffComponentImpl.hpp>
 #include <Ref/SendBuffApp/SendBuffComponentImpl.hpp>
+#include <Ref/RateMultiplexer/RateMultiplexerComponentImpl.hpp>
 #include <Ref/PingReceiver/PingReceiverComponentImpl.hpp>
 #include <Ref/SignalGen/SignalGen.hpp>
 #include <Svc/AssertFatalAdapter/AssertFatalAdapterComponentImpl.hpp>
@@ -55,6 +56,7 @@ extern Ref::RecvBuffImpl recvBuffComp;
 extern Ref::SendBuffImpl sendBuffComp;
 extern Ref::SignalGen SG1 , SG2, SG3, SG4, SG5;
 extern Ref::PingReceiverComponentImpl pingRcvr;
+extern Ref::RateMultiplexerComponentImpl ratePlexer;
 extern Drv::SocketIpDriverComponentImpl socketIpDriver;
 
 #endif

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface namespace="Ref" name="ChangeTimer">
+	<comment>
+	This describes a component's rate group subscription
+	</comment>
+	<args>
+		<arg name="InputRate" type="ENUM">
+			<enum name="RateGroup">
+				<item name="Hz0"/>
+				<item name="Hz1"/>
+				<item name="Hz10"/>
+			</enum>
+		</arg>
+		<arg name="TargetComponent" type="ENUM">
+			<enum name="Component">
+				<item name="LedBlinker"/>
+			</enum>
+		</arg>
+	</args>
+</interface>

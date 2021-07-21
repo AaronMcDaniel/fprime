@@ -20,37 +20,27 @@ namespace Fw {
         this->copyBuff(src.m_buf,this->getCapacity());
     }
 
-    ParamString::ParamString(void) : StringBase()  {
+    ParamString::ParamString() : StringBase()  {
         this->m_buf[0] = 0;
     }
 
-    ParamString::~ParamString(void) {
+    ParamString::~ParamString() {
     }
 
-    NATIVE_UINT_TYPE ParamString::length(void) const {
+    NATIVE_UINT_TYPE ParamString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* ParamString::toChar(void) const {
+    const char* ParamString::toChar() const {
         return this->m_buf;
     }
 
-    void ParamString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
-    }
-    
     SerializeStatus ParamString::serialize(SerializeBufferBase& buffer) const {
         NATIVE_UINT_TYPE strSize = strnlen(this->m_buf,sizeof(this->m_buf));
         // serialize string as buffer
         return buffer.serialize((U8*)this->m_buf,strSize);
     }
-    
+
     SerializeStatus ParamString::deserialize(SerializeBufferBase& buffer) {
         NATIVE_UINT_TYPE maxSize = sizeof(this->m_buf);
         // deserialize string
@@ -61,7 +51,7 @@ namespace Fw {
         return stat;
     }
 
-    NATIVE_UINT_TYPE ParamString::getCapacity(void) const {
+    NATIVE_UINT_TYPE ParamString::getCapacity() const {
         return FW_PARAM_STRING_MAX_SIZE;
     }
 

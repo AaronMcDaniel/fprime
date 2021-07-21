@@ -57,7 +57,7 @@ namespace Svc {
             //!  The readFile function reads the set of parameters from the file passed in to
             //!  the constructor.
             //!
-            void readParamFile(void); // NOTE: Assumed to run at initialzation time. No guard of data structure.
+            void readParamFile(); // NOTE: Assumed to run at initialization time. No guard of data structure.
 
             //!  \brief PrmDb destructor
             //!
@@ -86,7 +86,7 @@ namespace Svc {
             //!  \brief component ping handler
             //!
             //!  The ping handler responds to messages to verify that the task
-            //!  is still executing. Will call output poing port
+            //!  is still executing. Will call output ping port
             //!
             //!  \param portNum the number of the incoming port.
             //!  \param opCode the opcode being registered.
@@ -108,7 +108,7 @@ namespace Svc {
             //!  This function clears all entries from the RAM database
             //!
 
-            void clearDb(void); //!< clear the parameter database
+            void clearDb(); //!< clear the parameter database
 
             Fw::EightyCharString m_fileName; //!< filename for parameter storage
 

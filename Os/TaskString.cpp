@@ -20,37 +20,27 @@ namespace Os {
         this->copyBuff(src.m_buf,sizeof(this->m_buf));
     }
 
-    TaskString::TaskString(void) {
+    TaskString::TaskString() {
         this->m_buf[0] = 0;
     }
 
-    TaskString::~TaskString(void) {
+    TaskString::~TaskString() {
     }
 
-    NATIVE_UINT_TYPE TaskString::length(void) const {
+    NATIVE_UINT_TYPE TaskString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* TaskString::toChar(void) const {
+    const char* TaskString::toChar() const {
         return this->m_buf;
     }
 
-    void TaskString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
-    }
-    
     const TaskString& TaskString::operator=(const TaskString& other) {
         this->copyBuff(other.m_buf,this->getCapacity());
         return *this;
     }
 
-    NATIVE_UINT_TYPE TaskString::getCapacity(void) const {
+    NATIVE_UINT_TYPE TaskString::getCapacity() const {
         return FW_TASK_NAME_MAX_SIZE;
     }
 
@@ -69,7 +59,7 @@ namespace Os {
 
         return stat;
     }
-    
+
     void TaskString::terminate(NATIVE_UINT_TYPE size) {
         // null terminate the string
         this->m_buf[size < sizeof(this->m_buf)?size:sizeof(this->m_buf)-1] = 0;

@@ -30,11 +30,11 @@ namespace Drv {
 
       //! Construct object Tester
       //!
-      Tester(void);
+      Tester();
 
       //! Destroy object Tester
       //!
-      ~Tester(void);
+      ~Tester();
 
     public:
 
@@ -44,7 +44,7 @@ namespace Drv {
 
       //! Interrupt testing
       //!
-      void testInterrrupt(NATIVE_INT_TYPE gpio, NATIVE_INT_TYPE cycles);
+      void testInterrupt(NATIVE_INT_TYPE gpio, NATIVE_INT_TYPE cycles);
 
       //! Test output
       void testOutput(NATIVE_INT_TYPE gpio, NATIVE_INT_TYPE cycles);
@@ -73,11 +73,11 @@ namespace Drv {
 
       //! Connect ports
       //!
-      void connectPorts(void);
+      void connectPorts();
 
       //! Initialize components
       //!
-      void initComponents(void);
+      void initComponents();
 
     private:
 

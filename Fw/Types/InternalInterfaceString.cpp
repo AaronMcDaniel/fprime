@@ -20,29 +20,19 @@ namespace Fw {
         this->copyBuff(src.m_buf, sizeof(this->m_buf));
     }
 
-    InternalInterfaceString::InternalInterfaceString(void) : StringBase()  {
+    InternalInterfaceString::InternalInterfaceString() : StringBase()  {
         this->m_buf[0] = 0;
     }
 
-    InternalInterfaceString::~InternalInterfaceString(void) {
+    InternalInterfaceString::~InternalInterfaceString() {
     }
 
-    NATIVE_UINT_TYPE InternalInterfaceString::length(void) const {
+    NATIVE_UINT_TYPE InternalInterfaceString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* InternalInterfaceString::toChar(void) const {
+    const char* InternalInterfaceString::toChar() const {
         return this->m_buf;
-    }
-
-    void InternalInterfaceString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
     }
 
     SerializeStatus InternalInterfaceString::serialize(SerializeBufferBase& buffer) const {
@@ -61,10 +51,10 @@ namespace Fw {
         return stat;
     }
 
-    NATIVE_UINT_TYPE InternalInterfaceString::getCapacity(void) const {
+    NATIVE_UINT_TYPE InternalInterfaceString::getCapacity() const {
         return FW_INTERNAL_INTERFACE_STRING_MAX_SIZE;
     }
-    
+
     const InternalInterfaceString& InternalInterfaceString::operator=(const InternalInterfaceString& other) {
         this->copyBuff(other.m_buf,this->getCapacity());
         return *this;

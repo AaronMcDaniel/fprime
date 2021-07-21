@@ -14,11 +14,11 @@
 namespace Svc {
 
   // ----------------------------------------------------------------------
-  // Construction and destruction 
+  // Construction and destruction
   // ----------------------------------------------------------------------
 
   Tester ::
-    Tester(void) : 
+    Tester() :
 #if FW_OBJECT_NAMES == 1
       ActiveTextLoggerGTestBase("Tester", MAX_HISTORY_SIZE),
       component("ActiveTextLogger")
@@ -32,17 +32,17 @@ namespace Svc {
   }
 
   Tester ::
-    ~Tester(void) 
+    ~Tester()
   {
-    
+
   }
 
   // ----------------------------------------------------------------------
-  // Tests 
+  // Tests
   // ----------------------------------------------------------------------
 
   void Tester ::
-  run_nominal_test(void)
+  run_nominal_test()
   {
       printf("Testing writing to console\n");
 
@@ -51,14 +51,14 @@ namespace Svc {
 
       FwEventIdType id = 1;
       Fw::Time timeTag(TB_NONE,3,6);
-      Fw::TextLogSeverity severity = Fw::TEXT_LOG_ACTIVITY_HI;
+      Fw::LogSeverity severity = Fw::LogSeverity::ACTIVITY_HI;
       Fw::TextLogString text("This component is the greatest!");
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
       this->component.doDispatch();
 
       id = 2;
       timeTag.set(TB_PROC_TIME,4,7);
-      severity = Fw::TEXT_LOG_ACTIVITY_LO;
+      severity = Fw::LogSeverity::ACTIVITY_LO;
       text = "This component is the probably the greatest!";
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
       this->component.doDispatch();
@@ -66,7 +66,7 @@ namespace Svc {
       // This will output in a different format b/c WORKSTATION_TIME
       id = 3;
       timeTag.set(TB_WORKSTATION_TIME,5,876);
-      severity = Fw::TEXT_LOG_WARNING_LO;
+      severity = Fw::LogSeverity::WARNING_LO;
       text = "This component is maybe the greatest!";
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
       this->component.doDispatch();
@@ -87,7 +87,7 @@ namespace Svc {
 
       id = 4;
       timeTag.set(TB_NONE,5,8);
-      severity = Fw::TEXT_LOG_WARNING_LO;
+      severity = Fw::LogSeverity::WARNING_LO;
       const char* severityString = "WARNING_LO";
       text = "This component may be the greatest!";
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
@@ -118,7 +118,7 @@ namespace Svc {
 
       id = 5;
       timeTag.set(TB_PROC_TIME,6,9);
-      severity = Fw::TEXT_LOG_WARNING_HI;
+      severity = Fw::LogSeverity::WARNING_HI;
       severityString = "WARNING_HI";
       text = "This component is probably not the greatest!";
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
@@ -164,7 +164,7 @@ namespace Svc {
   }
 
   void Tester ::
-  run_off_nominal_test(void)
+  run_off_nominal_test()
   {
       // TODO file errors- use the Os/Stubs?
 
@@ -181,7 +181,7 @@ namespace Svc {
 
       ASSERT_TRUE(stat);
       ASSERT_TRUE(this->component.m_log_file.m_openFile);
-      ASSERT_EQ(0,strcmp("test_file_max",this->component.m_log_file.m_fileName.toChar()));
+      ASSERT_STREQ("test_file_max",this->component.m_log_file.m_fileName.toChar());
       ASSERT_EQ(0U, this->component.m_log_file.m_currentFileSize);
       ASSERT_EQ(45U, this->component.m_log_file.m_maxFileSize);
       ASSERT_EQ(Os::FileSystem::OP_OK,
@@ -190,7 +190,7 @@ namespace Svc {
       // Write once to the file:
       FwEventIdType id = 1;
       Fw::Time timeTag(TB_NONE,3,6);
-      Fw::TextLogSeverity severity = Fw::TEXT_LOG_ACTIVITY_HI;
+      Fw::LogSeverity severity = Fw::LogSeverity::ACTIVITY_HI;
       const char* severityString = "ACTIVITY_HI";
       Fw::TextLogString text("abcd");
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
@@ -224,12 +224,12 @@ namespace Svc {
       this->invoke_to_TextLogger(0,id,timeTag,severity,text);
       this->component.doDispatch();
 
-      // Verify file was closed and size didnt increase:
+      // Verify file was closed and size didn't increase:
       ASSERT_FALSE(this->component.m_log_file.m_openFile);
       ASSERT_EQ(past_size, this->component.m_log_file.m_currentFileSize);
       ASSERT_EQ(45U, this->component.m_log_file.m_maxFileSize);
 
-      // Read file to verify contents didnt change:
+      // Read file to verify contents didn't change:
       std::ifstream stream2("test_file_max");
       while(stream2) {
           char buf[256];
@@ -249,7 +249,7 @@ namespace Svc {
       // Verify made file with 0 suffix:
       ASSERT_TRUE(stat);
       ASSERT_TRUE(this->component.m_log_file.m_openFile);
-      ASSERT_EQ(0,strcmp("test_file_max0",this->component.m_log_file.m_fileName.toChar()));
+      ASSERT_STREQ("test_file_max0",this->component.m_log_file.m_fileName.toChar());
       ASSERT_EQ(0U, this->component.m_log_file.m_currentFileSize);
       ASSERT_EQ(50U, this->component.m_log_file.m_maxFileSize);
       ASSERT_EQ(Os::FileSystem::OP_OK,
@@ -353,11 +353,11 @@ namespace Svc {
   }
 
   // ----------------------------------------------------------------------
-  // Helper methods 
+  // Helper methods
   // ----------------------------------------------------------------------
 
   void Tester ::
-    connectPorts(void) 
+    connectPorts()
   {
 
     // TextLogger
@@ -372,7 +372,7 @@ namespace Svc {
   }
 
   void Tester ::
-    initComponents(void) 
+    initComponents()
   {
     this->init();
     this->component.init(

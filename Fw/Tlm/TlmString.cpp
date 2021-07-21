@@ -20,31 +20,21 @@ namespace Fw {
         this->copyBuff(src.m_buf,sizeof(this->m_buf));
     }
 
-    TlmString::TlmString(void) : StringBase(), m_maxSer(FW_TLM_STRING_MAX_SIZE) {
+    TlmString::TlmString() : StringBase(), m_maxSer(FW_TLM_STRING_MAX_SIZE) {
         this->m_buf[0] = 0;
     }
 
-    TlmString::~TlmString(void) {
+    TlmString::~TlmString() {
     }
 
-    NATIVE_UINT_TYPE TlmString::length(void) const {
+    NATIVE_UINT_TYPE TlmString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* TlmString::toChar(void) const {
+    const char* TlmString::toChar() const {
         return this->m_buf;
     }
 
-    void TlmString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
-    }
-    
     SerializeStatus TlmString::serialize(SerializeBufferBase& buffer) const {
         NATIVE_UINT_TYPE strSize = strnlen(this->m_buf,sizeof(this->m_buf));
 #if FW_AMPCS_COMPATIBLE
@@ -65,7 +55,7 @@ namespace Fw {
         return buffer.serialize((U8*)this->m_buf,strSize);
 #endif
     }
-    
+
     SerializeStatus TlmString::deserialize(SerializeBufferBase& buffer) {
         NATIVE_UINT_TYPE maxSize = sizeof(this->m_buf);
         // deserialize string
@@ -96,10 +86,10 @@ namespace Fw {
         this->m_maxSer = FW_MIN(size,FW_TLM_STRING_MAX_SIZE);
     }
 
-    NATIVE_UINT_TYPE TlmString::getCapacity(void) const {
+    NATIVE_UINT_TYPE TlmString::getCapacity() const {
         return FW_TLM_STRING_MAX_SIZE;
     }
-    
+
     void TlmString::terminate(NATIVE_UINT_TYPE size) {
         // null terminate the string
         this->m_buf[size < sizeof(this->m_buf)?size:sizeof(this->m_buf)-1] = 0;
@@ -115,5 +105,5 @@ namespace Fw {
     void TlmString::toString(StringBase& text) const {
         text = this->m_buf;
     }
-#endif    
+#endif
 }

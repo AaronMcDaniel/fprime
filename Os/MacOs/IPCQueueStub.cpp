@@ -239,7 +239,7 @@ namespace Os {
           status = Queue::QUEUE_NO_MORE_MSGS;
         }
         else {
-          // If this happens, a programming error or bit flip occured:
+          // If this happens, a programming error or bit flip occurred:
           FW_ASSERT(0);
         }
       }
@@ -298,7 +298,7 @@ namespace Os {
           status = Queue::QUEUE_SIZE_MISMATCH;
         }
         else {
-          // If this happens, a programming error or bit flip occured:
+          // If this happens, a programming error or bit flip occurred:
           // The only reason a pop should fail is if the user's buffer
           // was too small.
           FW_ASSERT(0);
@@ -339,7 +339,7 @@ namespace Os {
       return receiveBlockIPCStub(queueHandle, buffer, capacity, actualSize, priority);
   }
 
-  NATIVE_INT_TYPE IPCQueue::getNumMsgs(void) const {
+  NATIVE_INT_TYPE IPCQueue::getNumMsgs() const {
       QueueHandle* queueHandle = (QueueHandle*) this->m_handle;
       if (NULL == queueHandle) {
           return 0;
@@ -348,7 +348,7 @@ namespace Os {
       return queue->getCount();
   }
 
-  NATIVE_INT_TYPE IPCQueue::getMaxMsgs(void) const {
+  NATIVE_INT_TYPE IPCQueue::getMaxMsgs() const {
       QueueHandle* queueHandle = (QueueHandle*) this->m_handle;
       if (NULL == queueHandle) {
           return 0;
@@ -357,7 +357,7 @@ namespace Os {
       return queue->getMaxCount();
   }
 
-  NATIVE_INT_TYPE IPCQueue::getQueueSize(void) const {
+  NATIVE_INT_TYPE IPCQueue::getQueueSize() const {
       QueueHandle* queueHandle = (QueueHandle*) this->m_handle;
       if (NULL == queueHandle) {
           return 0;
@@ -366,7 +366,7 @@ namespace Os {
       return queue->getDepth();
   }
 
-  NATIVE_INT_TYPE IPCQueue::getMsgSize(void) const {
+  NATIVE_INT_TYPE IPCQueue::getMsgSize() const {
       QueueHandle* queueHandle = (QueueHandle*) this->m_handle;
       if (NULL == queueHandle) {
           return 0;

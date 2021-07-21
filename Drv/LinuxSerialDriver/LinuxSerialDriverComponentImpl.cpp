@@ -196,7 +196,7 @@ namespace Drv {
           return false;
       }
 
-      // CS8 = 8 data bits, CLOCAL = Local line, CREAD = Enable Reciever
+      // CS8 = 8 data bits, CLOCAL = Local line, CREAD = Enable Receiver
       // TODO PARENB for parity bit
       /*
         Even parity (7E1):
@@ -264,7 +264,7 @@ namespace Drv {
   }
 
   LinuxSerialDriverComponentImpl ::
-    ~LinuxSerialDriverComponentImpl(void)
+    ~LinuxSerialDriverComponentImpl()
   {
       if (this->m_fd != -1) {
           DEBUG_PRINT("Closing UART device %d\n", this->m_fd);
@@ -407,7 +407,7 @@ namespace Drv {
   }
 
   void LinuxSerialDriverComponentImpl ::
-    quitReadThread(void) {
+    quitReadThread() {
       this->m_quitReadThread = true;
   }
 

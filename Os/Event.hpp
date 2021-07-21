@@ -2,7 +2,7 @@
 // Author: Nathan Serafin (nathan.serafin@jpl.nasa.gov)
 // Date: 27 July, 2018
 //
-// OS-independant wrapper for events.
+// OS-independent wrapper for events.
 
 #ifndef EVENT_HPP
 #define EVENT_HPP
@@ -29,7 +29,7 @@ namespace Os {
             static I32 send(const TaskId& tid, const U32 events);
             static I32 receive(const U32 events, const U8 options,
                                const I32 timeout, U32* eventsReceived);
-            static I32 clear(void);
+            static I32 clear();
     };
 }
 

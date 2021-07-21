@@ -20,11 +20,11 @@ namespace Os {
         this->copyBuff(src.m_buf,sizeof(this->m_buf));
     }
 
-    QueueString::QueueString(void) : StringBase()  {
+    QueueString::QueueString() : StringBase()  {
         this->m_buf[0] = 0;
     }
 
-    QueueString::~QueueString(void) {
+    QueueString::~QueueString() {
     }
 
     const QueueString& QueueString::operator=(const QueueString& other) {
@@ -33,25 +33,15 @@ namespace Os {
     }
 
 
-    NATIVE_UINT_TYPE QueueString::length(void) const {
+    NATIVE_UINT_TYPE QueueString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* QueueString::toChar(void) const {
+    const char* QueueString::toChar() const {
         return this->m_buf;
     }
 
-    void QueueString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
-    }
-    
-    NATIVE_UINT_TYPE QueueString::getCapacity(void) const {
+    NATIVE_UINT_TYPE QueueString::getCapacity() const {
         return FW_QUEUE_NAME_MAX_SIZE;
     }
 
@@ -59,5 +49,4 @@ namespace Os {
         // null terminate the string
         this->m_buf[size < sizeof(this->m_buf)?size:sizeof(this->m_buf)-1] = 0;
     }
-    
 }

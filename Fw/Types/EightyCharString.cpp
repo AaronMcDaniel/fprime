@@ -20,29 +20,19 @@ namespace Fw {
         this->copyBuff(src.m_buf, sizeof(this->m_buf));
     }
 
-    EightyCharString::EightyCharString(void) : StringBase() {
+    EightyCharString::EightyCharString() : StringBase() {
         this->m_buf[0] = 0;
     }
 
-    EightyCharString::~EightyCharString(void) {
+    EightyCharString::~EightyCharString() {
     }
 
-    NATIVE_UINT_TYPE EightyCharString::length(void) const {
+    NATIVE_UINT_TYPE EightyCharString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* EightyCharString::toChar(void) const {
+    const char* EightyCharString::toChar() const {
         return this->m_buf;
-    }
-
-    void EightyCharString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
     }
 
     const EightyCharString& EightyCharString::operator=(const EightyCharString& other) {
@@ -66,10 +56,10 @@ namespace Fw {
         return stat;
     }
 
-    NATIVE_UINT_TYPE EightyCharString::getCapacity(void) const {
+    NATIVE_UINT_TYPE EightyCharString::getCapacity() const {
         return STRING_SIZE;
     }
-    
+
     void EightyCharString::terminate(NATIVE_UINT_TYPE size) {
         // null terminate the string
         this->m_buf[size < sizeof(this->m_buf)?size:sizeof(this->m_buf)-1] = 0;

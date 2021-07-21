@@ -23,32 +23,22 @@ namespace Fw {
         this->copyBuff(src.m_buf,sizeof(this->m_buf));
     }
 
-    LogStringArg::LogStringArg(void)
+    LogStringArg::LogStringArg()
             : StringBase(), m_maxSer(FW_LOG_STRING_MAX_SIZE) {
         this->m_buf[0] = 0;
     }
 
-    LogStringArg::~LogStringArg(void) {
+    LogStringArg::~LogStringArg() {
     }
 
-    NATIVE_UINT_TYPE LogStringArg::length(void) const {
+    NATIVE_UINT_TYPE LogStringArg::length() const {
         return (NATIVE_UINT_TYPE) strnlen(this->m_buf,sizeof(m_buf));
     }
 
-    const char* LogStringArg::toChar(void) const {
+    const char* LogStringArg::toChar() const {
         return this->m_buf;
     }
 
-    void LogStringArg::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
-    }
-    
     SerializeStatus LogStringArg::serialize(SerializeBufferBase& buffer) const {
         // serialize string
         NATIVE_UINT_TYPE strSize = FW_MIN(this->m_maxSer,static_cast<NATIVE_UINT_TYPE>(strnlen(this->m_buf,sizeof(this->m_buf))));
@@ -74,7 +64,7 @@ namespace Fw {
         return buffer.serialize((U8*)this->m_buf,strSize);
 #endif
     }
-    
+
     SerializeStatus LogStringArg::deserialize(SerializeBufferBase& buffer) {
         SerializeStatus stat;
 #if FW_AMPCS_COMPATIBLE
@@ -107,7 +97,7 @@ namespace Fw {
         this->m_maxSer = FW_MIN(size,FW_LOG_STRING_MAX_SIZE);
     }
 
-    NATIVE_UINT_TYPE LogStringArg::getCapacity(void) const {
+    NATIVE_UINT_TYPE LogStringArg::getCapacity() const {
         return FW_LOG_STRING_MAX_SIZE;
     }
 

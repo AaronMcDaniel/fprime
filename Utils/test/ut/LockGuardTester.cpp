@@ -1,4 +1,4 @@
-// ====================================================================== 
+// ======================================================================
 // \title  LockGuardTester.hpp
 // \author vwong
 // \brief  cpp file for LockGuard test harness implementation class
@@ -9,7 +9,7 @@
 //
 // ALL RIGHTS RESERVED. United States Government Sponsorship
 // acknowledged.
-// ====================================================================== 
+// ======================================================================
 
 #include "LockGuardTester.hpp"
 #include <time.h>
@@ -19,22 +19,22 @@
 namespace Utils {
 
   // ----------------------------------------------------------------------
-  // Construction and destruction 
+  // Construction and destruction
   // ----------------------------------------------------------------------
 
   LockGuardTester ::
-    LockGuardTester(void)
+    LockGuardTester()
   {
   }
 
   LockGuardTester ::
-    ~LockGuardTester(void) 
+    ~LockGuardTester()
   {
-    
+
   }
 
   // ----------------------------------------------------------------------
-  // Tests 
+  // Tests
   // ----------------------------------------------------------------------
 
   struct TaskData {
@@ -49,7 +49,7 @@ namespace Utils {
   }
 
   void LockGuardTester ::
-    testLocking(void) 
+    testLocking()
   {
     TaskData data;
     data.i = 0;
@@ -70,15 +70,16 @@ namespace Utils {
       ASSERT_EQ(data.i, 1);
     }
     stat = testTask.join(NULL);
+    ASSERT_EQ(stat, Os::Task::TASK_OK);
   }
 
 
   // ----------------------------------------------------------------------
-  // Helper methods 
+  // Helper methods
   // ----------------------------------------------------------------------
 
   void LockGuardTester ::
-    initComponents(void) 
+    initComponents()
   {
   }
 

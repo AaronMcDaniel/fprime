@@ -19,18 +19,6 @@ elseif(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
 		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentImplTimerFd.cpp"
 		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentImplCommon.cpp"
 	)
-elseif(${CMAKE_SYSTEM_NAME} STREQUAL "CygWin")
-	set(SOURCE_FILES
-		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentAi.xml"
-		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentImplTaskDelay.cpp"
-		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentImplCommon.cpp"
-	)
-elseif(${CMAKE_SYSTEM_NAME} STREQUAL "arm-linux-gnueabihf")
-	set(SOURCE_FILES
-		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentAi.xml"
-		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentImplTimerFd.cpp"
-		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentImplCommon.cpp"
-	)
 elseif(${CMAKE_SYSTEM_NAME} STREQUAL "RTEMS5")
 	set(SOURCE_FILES
 		"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentAi.xml"
@@ -45,3 +33,11 @@ else()
 endif()
 
 register_fprime_module()
+
+set(UT_SOURCE_FILES
+	"${CMAKE_CURRENT_LIST_DIR}/LinuxTimerComponentAi.xml"
+  "${CMAKE_CURRENT_LIST_DIR}/test/ut/Tester.cpp"
+  "${CMAKE_CURRENT_LIST_DIR}/test/ut/main.cpp"
+)
+
+register_fprime_ut()

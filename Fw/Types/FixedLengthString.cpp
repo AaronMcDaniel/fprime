@@ -20,29 +20,19 @@ namespace Fw {
         this->copyBuff(src.m_buf, sizeof(this->m_buf));
     }
 
-    FixedLengthString::FixedLengthString(void) : StringBase() {
+    FixedLengthString::FixedLengthString() : StringBase() {
         this->m_buf[0] = 0;
     }
 
-    FixedLengthString::~FixedLengthString(void) {
+    FixedLengthString::~FixedLengthString() {
     }
 
-    NATIVE_UINT_TYPE FixedLengthString::length(void) const {
+    NATIVE_UINT_TYPE FixedLengthString::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* FixedLengthString::toChar(void) const {
+    const char* FixedLengthString::toChar() const {
         return this->m_buf;
-    }
-
-    void FixedLengthString::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
     }
 
     const FixedLengthString& FixedLengthString::operator=(const FixedLengthString& other) {
@@ -66,10 +56,10 @@ namespace Fw {
         return stat;
     }
 
-    NATIVE_UINT_TYPE FixedLengthString::getCapacity(void) const {
+    NATIVE_UINT_TYPE FixedLengthString::getCapacity() const {
         return STRING_SIZE;
     }
-    
+
     void FixedLengthString::terminate(NATIVE_UINT_TYPE size) {
         // null terminate the string
         this->m_buf[size < sizeof(this->m_buf)?size:sizeof(this->m_buf)-1] = 0;

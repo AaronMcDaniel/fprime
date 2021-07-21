@@ -1,8 +1,8 @@
-// ====================================================================== 
+// ======================================================================
 // \title  GroundInterfaceImpl.hpp
 // \author lestarch
 // \brief  hpp file for GroundInterface component implementation class
-// ====================================================================== 
+// ======================================================================
 #include <Fw/Types/Serializable.hpp>
 #include "Svc/GroundInterface/GroundInterfaceComponentAc.hpp"
 #include "Utils/Types/CircularBuffer.hpp"
@@ -40,7 +40,7 @@ namespace Svc {
 
       //! Destroy object GroundInterface
       //!
-      ~GroundInterfaceComponentImpl(void);
+      ~GroundInterfaceComponentImpl();
 
     PRIVATE:
 
@@ -60,14 +60,14 @@ namespace Svc {
       //!
       void fileDownlinkBufferSendIn_handler(
           const NATIVE_INT_TYPE portNum, /*!< The port number*/
-          Fw::Buffer &fwBuffer 
+          Fw::Buffer &fwBuffer
       );
 
       //! Handler implementation for readCallback
       //!
       void readCallback_handler(
           const NATIVE_INT_TYPE portNum, /*!< The port number*/
-          Fw::Buffer &fwBuffer 
+          Fw::Buffer &fwBuffer
       );
 
       //! Handler implementation for schedIn
@@ -81,7 +81,7 @@ namespace Svc {
       void frame_send(
           U8* data, /*!< Data to be framed and sent out */
           TOKEN_TYPE size, /*!< Size of data in typed format */
-          TOKEN_TYPE packet_type = Fw::ComPacket::FW_PACKET_UNKNOWN /*!< Packet type override for anoymous data i.e. file downlink */
+          TOKEN_TYPE packet_type = Fw::ComPacket::FW_PACKET_UNKNOWN /*!< Packet type override for anonymous data i.e. file downlink */
       );
 
       //! Processes the out-going data into coms order

@@ -10,28 +10,27 @@ namespace Fw {
 
     class ParamString : public Fw::StringBase {
         public:
-        
+
             enum {
                 SERIALIZED_TYPE_ID = FW_TYPEID_PRM_STR,
                 SERIALIZED_SIZE = FW_PARAM_STRING_MAX_SIZE + sizeof(FwBuffSizeType) // size of buffer + storage of two size words
             };
-        
+
             ParamString(const char* src);
             ParamString(const StringBase& src);
             ParamString(const ParamString& src);
-            ParamString(void);
-            ~ParamString(void);
-            const char* toChar(void) const;
-            NATIVE_UINT_TYPE length(void) const;
-            
+            ParamString();
+            ~ParamString();
+            const char* toChar() const;
+            NATIVE_UINT_TYPE length() const;
+
             const ParamString& operator=(const ParamString& other); //!< equal operator for other strings
 
             SerializeStatus serialize(SerializeBufferBase& buffer) const;
             SerializeStatus deserialize(SerializeBufferBase& buffer);
-            
+
         private:
-            void copyBuff(const char* buff, NATIVE_UINT_TYPE size);
-            NATIVE_UINT_TYPE getCapacity(void) const ;
+            NATIVE_UINT_TYPE getCapacity() const ;
             void terminate(NATIVE_UINT_TYPE size); //!< terminate the string
 
             char m_buf[FW_PARAM_STRING_MAX_SIZE];

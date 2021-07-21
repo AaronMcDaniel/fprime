@@ -1,4 +1,4 @@
-// ====================================================================== 
+// ======================================================================
 // \title  BoundedScenario.hpp
 // \author bocchino
 // \brief  Run a scenario, bounding the number of steps
@@ -7,7 +7,7 @@
 // Copyright (C) 2017 California Institute of Technology.
 // ALL RIGHTS RESERVED.  United States Government Sponsorship
 // acknowledged.
-// ====================================================================== 
+// ======================================================================
 
 #ifndef STest_BoundedScenario_HPP
 #define STest_BoundedScenario_HPP
@@ -24,7 +24,7 @@ namespace STest {
     public:
 
       // ----------------------------------------------------------------------
-      // Constructors and destructors 
+      // Constructors and destructors
       // ----------------------------------------------------------------------
 
       //! Construct a BoundedScenario object
@@ -41,7 +41,7 @@ namespace STest {
       }
 
       //! Destroy a BoundedScenario object
-      ~BoundedScenario(void) {
+      ~BoundedScenario() {
 
       }
 
@@ -51,7 +51,7 @@ namespace STest {
       // ConditionalScenario implementation
       // ----------------------------------------------------------------------
 
-      //! The virtual condition required by CondtiionalScenario
+      //! The virtual condition required by ConditionalScenario
       //! \return Whether the condition holds
       bool condition_ConditionalScenario(
           const State& state //!< The system state
@@ -69,14 +69,14 @@ namespace STest {
       }
 
       //! The virtual implementation of reset required by ConditionalScenario
-      void reset_ConditionalScenario(void) {
+      void reset_ConditionalScenario() {
         this->numSteps = 0;
       }
 
     private:
 
       // ----------------------------------------------------------------------
-      // Private member variables 
+      // Private member variables
       // ----------------------------------------------------------------------
 
       //! The number of steps

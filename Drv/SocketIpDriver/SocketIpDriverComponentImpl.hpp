@@ -55,13 +55,13 @@ namespace Drv {
 
       //! Destroy object SocketIpDriver
       //!
-      ~SocketIpDriverComponentImpl(void);
+      ~SocketIpDriverComponentImpl();
 
       //! Open up the socket port, ready for communications
       //!
       SocketIpStatus configure(
-              const char* hostname,
-              U16 port,
+              const char* hostname, /*!< Hostname of remote server */
+              U16 port, /*!< Port of remote server */
               const bool send_udp = SOCKET_SEND_UDP, /*!< Send down using UDP. Default: read from configuration HPP*/
               const U32 timeout_seconds = SOCKET_TIMEOUT_SECONDS, /*!< Timeout(S). Default: from configuration HPP*/
               const U32 timeout_microseconds = SOCKET_TIMEOUT_MICROSECONDS /*!< Timeout(uS). Default: from configuration HPP*/
@@ -81,7 +81,7 @@ namespace Drv {
               NATIVE_INT_TYPE cpuAffinity = -1 //!< CPU affinity of the task to start
       );
 
-      //! Task to join nondetached pthreads 
+      //! Task to join nondetached pthreads
       //!
       Os::Task::TaskStatus joinSocketTask(void** value_ptr);
 
@@ -99,13 +99,13 @@ namespace Drv {
       //!
       void send_handler(
           const NATIVE_INT_TYPE portNum, /*!< The port number*/
-          Fw::Buffer &fwBuffer 
+          Fw::Buffer &fwBuffer
       );
 
       // socket helper instance
       SocketHelper m_helper;
 
-      Os::Task m_recvTask;           //!< Os::Task to start for reciving data
+      Os::Task m_recvTask;           //!< Os::Task to start for receiving data
       Fw::Buffer m_buffer;           //!< Fw::Buffer used to pass data
       U8 m_backing_data[MAX_RECV_BUFFER_SIZE]; //!< Buffer used to store data
       bool m_stop; //!< Stop the receiving port

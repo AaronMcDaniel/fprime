@@ -50,11 +50,11 @@ namespace Svc {
             //!
             //!  The init() function initializes the autocoded base class
 
-            void init(void);
+            void init();
 
             //!  \brief RateGroupDriverImpl destructor
 
-            ~RateGroupDriverImpl(void);
+            ~RateGroupDriverImpl();
 
         PRIVATE:
 
@@ -70,7 +70,7 @@ namespace Svc {
             //! rollover counter
             NATIVE_INT_TYPE m_rollover;
         public:
-            //! Size of the devider table, provided as a constants to users passing the table in
+            //! Size of the divider table, provided as a constants to users passing the table in
             static const NATIVE_UINT_TYPE DIVIDER_SIZE = NUM_CYCLEOUT_OUTPUT_PORTS;
     };
 

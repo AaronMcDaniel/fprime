@@ -12,15 +12,15 @@ namespace Fw {
     class ActiveComponentExitSerializableBuffer : public Fw::SerializeBufferBase {
 
         public:
-            NATIVE_UINT_TYPE getBuffCapacity(void) const {
+            NATIVE_UINT_TYPE getBuffCapacity() const {
                 return sizeof(m_buff);
             }
 
-            U8* getBuffAddr(void) {
+            U8* getBuffAddr() {
                 return m_buff;
             }
 
-            const U8* getBuffAddr(void) const {
+            const U8* getBuffAddr() const {
                 return m_buff;
             }
 
@@ -61,7 +61,7 @@ namespace Fw {
         taskName = taskNameChar;
 #endif
 // If running with the baremetal scheduler, use a variant of the task-loop that
-// does not loop internal, but waits for an external eiteration call.
+// does not loop internal, but waits for an external iteration call.
 #if FW_BAREMETAL_SCHEDULER == 1
 	Os::Task::TaskStatus status = this->m_task.start(taskName, identifier, priority, stackSize, this->s_baseBareTask, this, cpuAffinity);
 #else
@@ -70,7 +70,7 @@ namespace Fw {
         FW_ASSERT(status == Os::Task::TASK_OK,(NATIVE_INT_TYPE)status);
     }
 
-    void ActiveComponentBase::exit(void) {
+    void ActiveComponentBase::exit() {
         ActiveComponentExitSerializableBuffer exitBuff;
         SerializeStatus stat = exitBuff.serialize((I32)ACTIVE_COMPONENT_EXIT);
         FW_ASSERT(FW_SERIALIZE_OK == stat,static_cast<NATIVE_INT_TYPE>(stat));
@@ -122,7 +122,7 @@ namespace Fw {
         comp->finalizer();
     }
 
-    void ActiveComponentBase::loop(void) {
+    void ActiveComponentBase::loop() {
 
         bool quitLoop = false;
         while (!quitLoop) {
@@ -140,10 +140,10 @@ namespace Fw {
 
     }
 
-    void ActiveComponentBase::preamble(void) {
+    void ActiveComponentBase::preamble() {
     }
 
-    void ActiveComponentBase::finalizer(void) {
+    void ActiveComponentBase::finalizer() {
     }
 
 }

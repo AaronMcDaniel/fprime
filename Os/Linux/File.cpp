@@ -66,6 +66,9 @@ namespace Os {
 #endif
             case OPEN_CREATE:
                 flags = O_WRONLY | O_CREAT | O_TRUNC;
+                if(include_excl) {
+                    flags |= O_EXCL;
+                }
                 break;
             case OPEN_APPEND:
                 flags = O_WRONLY | O_CREAT | O_APPEND;
@@ -95,6 +98,9 @@ namespace Os {
                 case EACCES:
                     stat = NO_PERMISSION;
                     break;
+                case EEXIST:
+                    stat = FILE_EXISTS;
+                    break;
                 default:
                     stat = OTHER_ERROR;
                     break;
@@ -106,7 +112,7 @@ namespace Os {
         return stat;
     }
 
-    bool File::isOpen(void) {
+    bool File::isOpen() {
       return this->m_fd > 0;
     }
 
@@ -396,7 +402,7 @@ namespace Os {
         return stat;
     }
 
-    void File::close(void) {
+    void File::close() {
         if ((this->m_fd != -1) and (this->m_mode != OPEN_NO_MODE)) {
             (void)::close(this->m_fd);
             this->m_fd = -1;
@@ -404,11 +410,11 @@ namespace Os {
         this->m_mode = OPEN_NO_MODE;
     }
 
-    NATIVE_INT_TYPE File::getLastError(void) {
+    NATIVE_INT_TYPE File::getLastError() {
         return this->m_lastError;
     }
 
-    const char* File::getLastErrorString(void) {
+    const char* File::getLastErrorString() {
         return strerror(this->m_lastError);
     }
 

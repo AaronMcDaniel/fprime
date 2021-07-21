@@ -22,7 +22,7 @@ namespace Svc {
 // Construction and destruction
 // ----------------------------------------------------------------------
 
-Tester ::Tester(void)
+Tester ::Tester()
     : GenericHubGTestBase("Tester", MAX_HISTORY_SIZE),
       componentIn("GenericHubIn"),
       componentOut("GenericHubOut"),
@@ -36,13 +36,13 @@ Tester ::Tester(void)
     this->connectPorts();
 }
 
-Tester ::~Tester(void) {}
+Tester ::~Tester() {}
 
 // ----------------------------------------------------------------------
 // Tests
 // ----------------------------------------------------------------------
 
-void Tester ::test_in_out(void) {
+void Tester ::test_in_out() {
     U32 max = std::min(this->componentIn.getNum_portIn_InputPorts(), this->componentOut.getNum_portOut_OutputPorts());
     for (U32 i = 0; i < max; i++) {
         send_random_comm(i);
@@ -51,7 +51,7 @@ void Tester ::test_in_out(void) {
     }
 }
 
-void Tester ::test_buffer_io(void) {
+void Tester ::test_buffer_io() {
     U32 max = std::min(this->componentIn.getNum_buffersIn_InputPorts(), this->componentOut.getNum_buffersOut_OutputPorts());
     for (U32 i = 0; i < max; i++) {
         send_random_buffer(i);
@@ -60,7 +60,7 @@ void Tester ::test_buffer_io(void) {
     }
 }
 
-void Tester ::test_random_io(void) {
+void Tester ::test_random_io() {
     for (U32 i = 0; i < 10000; i++) {
         U32 choice = STest::Pick::lowerUpper(0, 1);
         if (choice) {
@@ -182,9 +182,10 @@ void Tester ::from_dataInDeallocate_handler(const NATIVE_INT_TYPE portNum, Fw::B
 // Helper methods
 // ----------------------------------------------------------------------
 
-void Tester ::connectPorts(void) {
+void Tester ::connectPorts() {
     // buffersIn
-    for (NATIVE_INT_TYPE i = 0; i < 10; ++i) {
+    U32 max = std::min(this->componentIn.getNum_buffersIn_InputPorts(), this->componentOut.getNum_buffersOut_OutputPorts());
+    for (U32 i = 0; i < max; ++i) {
         this->connect_to_buffersIn(i, this->componentIn.get_buffersIn_InputPort(i));
     }
 
@@ -192,7 +193,7 @@ void Tester ::connectPorts(void) {
     this->connect_to_dataIn(0, this->componentOut.get_dataIn_InputPort(0));
 
     // buffersOut
-    for (NATIVE_INT_TYPE i = 0; i < 10; ++i) {
+    for (U32 i = 0; i < max; ++i) {
         this->componentOut.set_buffersOut_OutputPort(i, this->get_from_buffersOut(i));
     }
 
@@ -211,7 +212,8 @@ void Tester ::connectPorts(void) {
     // ----------------------------------------------------------------------
     // Connect serial output ports
     // ----------------------------------------------------------------------
-    for (NATIVE_INT_TYPE i = 0; i < 10; ++i) {
+    max = std::min(this->componentIn.getNum_portIn_InputPorts(), this->componentOut.getNum_portOut_OutputPorts());
+    for (U32 i = 0; i < max; ++i) {
         this->componentOut.set_portOut_OutputPort(i, this->get_from_portOut(i));
     }
 
@@ -219,12 +221,12 @@ void Tester ::connectPorts(void) {
     // Connect serial input ports
     // ----------------------------------------------------------------------
     // portIn
-    for (NATIVE_INT_TYPE i = 0; i < 10; ++i) {
+    for (U32 i = 0; i < max; ++i) {
         this->connect_to_portIn(i, this->componentIn.get_portIn_InputPort(i));
     }
 }
 
-void Tester ::initComponents(void) {
+void Tester ::initComponents() {
     this->init();
     this->componentIn.init(INSTANCE);
     this->componentOut.init(INSTANCE + 1);

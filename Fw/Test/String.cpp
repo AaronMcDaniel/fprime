@@ -20,29 +20,19 @@ namespace Test {
         this->copyBuff(src.m_buf, sizeof(this->m_buf));
     }
 
-    String::String(void) : StringBase() {
+    String::String() : StringBase() {
         this->m_buf[0] = 0;
     }
 
-    String::~String(void) {
+    String::~String() {
     }
 
-    NATIVE_UINT_TYPE String::length(void) const {
+    NATIVE_UINT_TYPE String::length() const {
         return strnlen(this->m_buf,sizeof(this->m_buf));
     }
 
-    const char* String::toChar(void) const {
+    const char* String::toChar() const {
         return this->m_buf;
-    }
-
-    void String::copyBuff(const char* buff, NATIVE_UINT_TYPE size) {
-        FW_ASSERT(buff);
-        // check for self copy
-        if (buff != this->m_buf) {
-            (void)strncpy(this->m_buf,buff,size);
-            // NULL terminate
-            this->terminate(sizeof(this->m_buf));
-        }
     }
 
     const String& String::operator=(const String& other) {
@@ -66,10 +56,10 @@ namespace Test {
         return stat;
     }
 
-    NATIVE_UINT_TYPE String::getCapacity(void) const {
+    NATIVE_UINT_TYPE String::getCapacity() const {
         return STRING_SIZE;
     }
-    
+
     void String::terminate(NATIVE_UINT_TYPE size) {
         // null terminate the string
         this->m_buf[size < sizeof(this->m_buf)?size:sizeof(this->m_buf)-1] = 0;
